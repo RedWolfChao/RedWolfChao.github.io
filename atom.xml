@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://joryhe.coding.me/"/>
-  <updated>2017-04-24T04:23:00.448Z</updated>
+  <updated>2017-04-24T05:21:03.207Z</updated>
   <id>http://joryhe.coding.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://joryhe.coding.me/post/First.html"/>
     <id>http://joryhe.coding.me/post/First.html</id>
     <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-24T04:23:00.448Z</updated>
+    <updated>2017-04-24T05:21:03.207Z</updated>
     
     <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
 ]]></content>
@@ -40,29 +40,123 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://joryhe.coding.me/post/hello-world.html"/>
-    <id>http://joryhe.coding.me/post/hello-world.html</id>
-    <published>2017-04-24T01:17:37.599Z</published>
-    <updated>2017-04-24T01:17:37.599Z</updated>
+    <title>双击返回键退出程序 测试</title>
+    <link href="http://joryhe.coding.me/post/Android%20%20%E5%8F%8C%E5%87%BB%E8%BF%94%E5%9B%9E%E9%94%AE%E9%80%80%E5%87%BA%E7%A8%8B%E5%BA%8F.html"/>
+    <id>http://joryhe.coding.me/post/Android  双击返回键退出程序.html</id>
+    <published>2017-04-24T03:05:40.000Z</published>
+    <updated>2017-04-24T05:20:50.188Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<p>###简单的说 就是重写系统的onBackPressed方法###</p>
+<p><strong>当第一次点击的时候,把一个标记记为true,再次点击的时候 判断标记为true则退出,否则 再记为true,同事起一个线程,2-3s吧标记记为false,挺简单的东西,上代码..仅做保存 </strong></p>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">boolean</span> isExit = <span class="keyword">false</span>;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</div><div class="line">        exitBy2Click();      <span class="comment">//调用双击退出函数</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 双击退出函数</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">exitBy2Click</span><span class="params">()</span> </span>&#123;</div><div class="line">        Timer timer = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">if</span> (isExit == <span class="keyword">false</span>) &#123;</div><div class="line">            isExit = <span class="keyword">true</span>; <span class="comment">// 准备退出</span></div><div class="line">            Toast.makeText(<span class="keyword">this</span>, <span class="string">"请再点击一次返回键退出程序"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">            timer = <span class="keyword">new</span> Timer();</div><div class="line">            timer.schedule(<span class="keyword">new</span> TimerTask() &#123;</div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                    isExit = <span class="keyword">false</span>; <span class="comment">// 取消退出</span></div><div class="line">                &#125;</div><div class="line">            &#125;, <span class="number">3000</span>); <span class="comment">// 如果3秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务</span></div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            finish();</div><div class="line">            System.exit(<span class="number">0</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###简单的说 就是重写系统的onBackPressed方法###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当第一次点击的时候,把一个标记记为true,再次点击的时候 判断标记为true则退出,否则 再记为true,同事起一个线程,2-3s吧标记记为false,挺简单的东西,上代码.
+    
+    </summary>
+    
+    
+      <category term="Tag1测试" scheme="http://joryhe.coding.me/tags/Tag1%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="Tag2测试" scheme="http://joryhe.coding.me/tags/Tag2%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="Tag3测试" scheme="http://joryhe.coding.me/tags/Tag3%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你猜栾绪业是不是傻逼了</title>
+    <link href="http://joryhe.coding.me/post/First%20-%20%E5%89%AF%E6%9C%AC%20(4).html"/>
+    <id>http://joryhe.coding.me/post/First - 副本 (4).html</id>
+    <published>2017-04-24T03:05:40.000Z</published>
+    <updated>2017-04-24T05:22:45.927Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;&lt;strong&gt;不要迷恋哥,哥只是个传说?Hello World怎么删除呢..&lt;/strong&gt;&lt;/p&gt;
+
     
     </summary>
     
+    
+      <category term="绝对傻逼1" scheme="http://joryhe.coding.me/tags/%E7%BB%9D%E5%AF%B9%E5%82%BB%E9%80%BC1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你猜栾绪业是不是傻逼了</title>
+    <link href="http://joryhe.coding.me/post/First%20-%20%E5%89%AF%E6%9C%AC%20(2).html"/>
+    <id>http://joryhe.coding.me/post/First - 副本 (2).html</id>
+    <published>2017-04-24T03:05:40.000Z</published>
+    <updated>2017-04-24T05:21:03.207Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;不要迷恋哥,哥只是个传说?Hello World怎么删除呢..&lt;/strong&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="绝对傻逼" scheme="http://joryhe.coding.me/tags/%E7%BB%9D%E5%AF%B9%E5%82%BB%E9%80%BC/"/>
+    
+      <category term="不一定是傻逼,但绝对是二逼" scheme="http://joryhe.coding.me/tags/%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E5%82%BB%E9%80%BC-%E4%BD%86%E7%BB%9D%E5%AF%B9%E6%98%AF%E4%BA%8C%E9%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你猜栾绪业是不是傻逼了</title>
+    <link href="http://joryhe.coding.me/post/First%20-%20%E5%89%AF%E6%9C%AC.html"/>
+    <id>http://joryhe.coding.me/post/First - 副本.html</id>
+    <published>2017-04-24T03:05:40.000Z</published>
+    <updated>2017-04-24T05:21:03.207Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;不要迷恋哥,哥只是个传说?Hello World怎么删除呢..&lt;/strong&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="绝对傻逼" scheme="http://joryhe.coding.me/tags/%E7%BB%9D%E5%AF%B9%E5%82%BB%E9%80%BC/"/>
+    
+      <category term="不一定是傻逼,但绝对是二逼" scheme="http://joryhe.coding.me/tags/%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E5%82%BB%E9%80%BC-%E4%BD%86%E7%BB%9D%E5%AF%B9%E6%98%AF%E4%BA%8C%E9%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你猜栾绪业是不是傻逼了</title>
+    <link href="http://joryhe.coding.me/post/First%20-%20%E5%89%AF%E6%9C%AC%20(3).html"/>
+    <id>http://joryhe.coding.me/post/First - 副本 (3).html</id>
+    <published>2017-04-24T03:05:40.000Z</published>
+    <updated>2017-04-24T05:21:03.207Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;不要迷恋哥,哥只是个传说?Hello World怎么删除呢..&lt;/strong&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="绝对傻逼" scheme="http://joryhe.coding.me/tags/%E7%BB%9D%E5%AF%B9%E5%82%BB%E9%80%BC/"/>
+    
+      <category term="不一定是傻逼,但绝对是二逼" scheme="http://joryhe.coding.me/tags/%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E5%82%BB%E9%80%BC-%E4%BD%86%E7%BB%9D%E5%AF%B9%E6%98%AF%E4%BA%8C%E9%80%BC/"/>
     
   </entry>
   
