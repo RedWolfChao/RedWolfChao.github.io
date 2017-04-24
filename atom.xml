@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>My Hexo</title>
-  <subtitle>My Hexo SubTitle</subtitle>
+  <title>RedWolf</title>
+  <subtitle>栾儿子,来给爹爹行礼!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-04-24T03:21:59.185Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://joryhe.coding.me/"/>
+  <updated>2017-04-24T04:23:00.448Z</updated>
+  <id>http://joryhe.coding.me/</id>
   
   <author>
     <name>RedWolf</name>
@@ -16,27 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>��������ҵ�ǲ���ɵ����</title>
-    <link href="http://yoursite.com/2017/04/24/First/"/>
-    <id>http://yoursite.com/2017/04/24/First/</id>
+    <title>你猜栾绪业是不是傻逼了</title>
+    <link href="http://joryhe.coding.me/post/First.html"/>
+    <id>http://joryhe.coding.me/post/First.html</id>
     <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-24T03:21:59.185Z</updated>
+    <updated>2017-04-24T04:23:00.448Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>不要迷恋哥,哥只是个传说?Hello World怎么删除呢..</strong></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;不要迷恋哥,哥只是个传说?Hello World怎么删除呢..&lt;/strong&gt;&lt;/p&gt;
+
     
     </summary>
     
     
-      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
+      <category term="绝对傻逼" scheme="http://joryhe.coding.me/tags/%E7%BB%9D%E5%AF%B9%E5%82%BB%E9%80%BC/"/>
     
-      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
+      <category term="不一定是傻逼,但绝对是二逼" scheme="http://joryhe.coding.me/tags/%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E5%82%BB%E9%80%BC-%E4%BD%86%E7%BB%9D%E5%AF%B9%E6%98%AF%E4%BA%8C%E9%80%BC/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/04/24/hello-world/"/>
-    <id>http://yoursite.com/2017/04/24/hello-world/</id>
+    <link href="http://joryhe.coding.me/post/hello-world.html"/>
+    <id>http://joryhe.coding.me/post/hello-world.html</id>
     <published>2017-04-24T01:17:37.599Z</published>
     <updated>2017-04-24T01:17:37.599Z</updated>
     
