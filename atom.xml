@@ -336,40 +336,14 @@
   </entry>
   
   <entry>
-    <title>Mark 测试</title>
-    <link href="http://joryhe.coding.me/post/%E6%B5%8B%E8%AF%951.html"/>
-    <id>http://joryhe.coding.me/post/测试1.html</id>
-    <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-25T01:21:27.859Z</updated>
-    
-    <content type="html"><![CDATA[<p>###然而我是测试的Mark###</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###然而我是测试的Mark###&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/
-    
-    </summary>
-    
-    
-      <category term="Tag1测试" scheme="http://joryhe.coding.me/tags/Tag1%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag2测试" scheme="http://joryhe.coding.me/tags/Tag2%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag3测试" scheme="http://joryhe.coding.me/tags/Tag3%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mark 测试2</title>
+    <title>我是测试文件</title>
     <link href="http://joryhe.coding.me/post/%E6%B5%8B%E8%AF%952.html"/>
     <id>http://joryhe.coding.me/post/测试2.html</id>
     <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-25T01:21:58.601Z</updated>
+    <updated>2017-04-26T03:02:35.010Z</updated>
     
     <content type="html"><![CDATA[<p>###然而我是测试的Mark###</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈我是测试文件</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -379,11 +353,7 @@
     </summary>
     
     
-      <category term="Tag5测试" scheme="http://joryhe.coding.me/tags/Tag5%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag4测试" scheme="http://joryhe.coding.me/tags/Tag4%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag6测试" scheme="http://joryhe.coding.me/tags/Tag6%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://joryhe.coding.me/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
