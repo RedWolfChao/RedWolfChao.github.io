@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>RedWolf Blog</title>
+  <title>RedWolfChao Blog</title>
   <subtitle>沉默是金</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://joryhe.coding.me/</id>
   
   <author>
-    <name>RedWolf 我是作者</name>
+    <name>RedWolfChao</name>
     
   </author>
   
