@@ -1,28 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>RedWolf 无奈我是主标题</title>
-  <subtitle>无奈 我是副标题!</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="http://joryhe.coding.me/"/>
-  <updated>2017-04-26T02:45:26.834Z</updated>
-  <id>http://joryhe.coding.me/</id>
-  
-  <author>
-    <name>RedWolf 我是作者</name>
+<!DOCTYPE html>
+<html>
+<head>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Material_Design_提供组件</title>
-    <link href="http://joryhe.coding.me/post/Material-Design-%E6%8F%90%E4%BE%9B%E7%BB%84%E4%BB%B6.html"/>
-    <id>http://joryhe.coding.me/post/Material-Design-提供组件.html</id>
-    <published>2017-04-26T02:44:41.000Z</published>
-    <updated>2017-04-26T02:45:26.834Z</updated>
+
     
-    <content type="html"><![CDATA[<p>反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来;</p>
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Material_Design_提供组件 | RedWolf 无奈我是主标题 | 无奈 我是副标题!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Material_Design">
+    <meta name="description" content="反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来; Demo主要知识点&amp;lt;解释纯属个人见解&amp;gt;  Toolbar- -&amp;gt;Material Design中推荐用来替代ActionBar的组件  DrawerLayout- -&amp;gt;侧滑">
+<meta name="keywords" content="Material_Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Material_Design_提供组件">
+<meta property="og:url" content="http://joryhe.coding.me/post/Material-Design-提供组件.html">
+<meta property="og:site_name" content="RedWolf 无奈我是主标题">
+<meta property="og:description" content="反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来; Demo主要知识点&amp;lt;解释纯属个人见解&amp;gt;  Toolbar- -&amp;gt;Material Design中推荐用来替代ActionBar的组件  DrawerLayout- -&amp;gt;侧滑">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100218290?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100252518?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100323948?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100434028?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100517941?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100542239?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100621145?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100717094?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426100941159?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426101002378?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426101021006?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170426102821859?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-04-26T02:45:26.834Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Material_Design_提供组件">
+<meta name="twitter:description" content="反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来; Demo主要知识点&amp;lt;解释纯属个人见解&amp;gt;  Toolbar- -&amp;gt;Material Design中推荐用来替代ActionBar的组件  DrawerLayout- -&amp;gt;侧滑">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170426100218290?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+    
+        <link rel="alternate" type="application/atom+xml" title="RedWolf 无奈我是主标题" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/my_icon.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">RedWolf 我是作者</h5>
+          <a href="mailto:18811055601@163.com" title="18811055601@163.com" class="mail">18811055601@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/RedWolfChao" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://blog.csdn.net/redwolfchao" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Material_Design_提供组件</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Material_Design_提供组件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-26T02:44:41.000Z" itemprop="datePublished" class="page-time">
+  2017-04-26
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-Material-Design-提供组件"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Material_Design_提供组件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-26 10:44:41" datetime="2017-04-26T02:44:41.000Z"  itemprop="datePublished">2017-04-26</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来;</p>
 <p><strong>Demo主要知识点&lt;解释纯属个人见解&gt;</strong></p>
 <ol>
 <li><p>Toolbar- -&gt;Material Design中推荐用来替代ActionBar的组件</p>
@@ -321,70 +489,297 @@
             </figure></p>
 <p>资源都在源码中,可能和本文格式上有点出入,但是代码大致相同;</p>
 <p><a href="https://github.com/RedWolfChao/MaterialDesignDemo" target="_blank" rel="external">https://github.com/RedWolfChao/MaterialDesignDemo</a></p>
-]]></content>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-26T02:45:26.834Z" itemprop="dateUpdated">2017-04-26 10:45:26</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/post/Material-Design-提供组件.html" target="_blank" rel="external">http://joryhe.coding.me/post/Material-Design-提供组件.html</a>
+        
+    </div>
+    <footer>
+        <a href="http://joryhe.coding.me">
+            <img src="/img/my_icon.jpg" alt="RedWolf 我是作者">
+            RedWolf 我是作者
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Material-Design/">Material_Design</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
-    <summary type="html">
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/Material-Design-提供组件.html&title=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/Material-Design-提供组件.html&title=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&source=无奈 我是描述" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/Material-Design-提供组件.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&url=http://joryhe.coding.me/post/Material-Design-提供组件.html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/Material-Design-提供组件.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
     
-      &lt;p&gt;反编译看的实在有点头疼,于是就仔细研究了一下前一段时间的一篇文章Material Design规范,发现这个东西2014年就出来了,为什么我今年才发现呢..无奈.于是乎,读书查资料,撸出一个Demo来;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Demo主要知识点&amp;lt;解释纯属个人见
-    
-    </summary>
-    
-    
-      <category term="Material_Design" scheme="http://joryhe.coding.me/tags/Material-Design/"/>
-    
-  </entry>
+<nav class="post-nav flex-row flex-justify-between">
   
-  <entry>
-    <title>Mark 测试</title>
-    <link href="http://joryhe.coding.me/post/%E6%B5%8B%E8%AF%951.html"/>
-    <id>http://joryhe.coding.me/post/测试1.html</id>
-    <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-25T01:21:27.859Z</updated>
-    
-    <content type="html"><![CDATA[<p>###然而我是测试的Mark###</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###然而我是测试的Mark###&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/
-    
-    </summary>
-    
-    
-      <category term="Tag1测试" scheme="http://joryhe.coding.me/tags/Tag1%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag2测试" scheme="http://joryhe.coding.me/tags/Tag2%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag3测试" scheme="http://joryhe.coding.me/tags/Tag3%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
+    <div class="waves-block waves-effect prev">
+      <a href="/post/测试2.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Mark 测试2</h4>
+      </a>
+    </div>
   
-  <entry>
-    <title>Mark 测试2</title>
-    <link href="http://joryhe.coding.me/post/%E6%B5%8B%E8%AF%952.html"/>
-    <id>http://joryhe.coding.me/post/测试2.html</id>
-    <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-25T01:21:58.601Z</updated>
-    
-    <content type="html"><![CDATA[<p>###然而我是测试的Mark###</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###然而我是测试的Mark###&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/
-    
-    </summary>
-    
-    
-      <category term="Tag5测试" scheme="http://joryhe.coding.me/tags/Tag5%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag4测试" scheme="http://joryhe.coding.me/tags/Tag4%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="Tag6测试" scheme="http://joryhe.coding.me/tags/Tag6%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
+
   
-</feed>
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="Material-Design-提供组件" data-title="Material_Design_提供组件" data-url="http://joryhe.coding.me/post/Material-Design-提供组件.html"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>RedWolf 我是作者 &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/Material-Design-提供组件.html&title=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/Material-Design-提供组件.html&title=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&source=无奈 我是描述" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/Material-Design-提供组件.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Material_Design_提供组件》 — RedWolf 无奈我是主标题&url=http://joryhe.coding.me/post/Material-Design-提供组件.html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/Material-Design-提供组件.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aS24DIRAFQN//0pNtNh6/18SRBopVZFlAedGhP69XvK5fK/nmyp75DvXCwMB4LOO6Xe+OnB1/f/X7c999BwMD4xzGfehMAC3y/rr53TAwMDDyqycBtP2ZMDAwMFYYK+nuPRIDAwNjJYltE8vZdb+ei2NgYDyQkYfR///7K/0NDAyMRzGucs2al20qW98KAwNja8as9dgmtPdXnI1rYGBgnMnIN83HMmbp6/0nwzofBgbGYxn5iMOsiN+W8IYDHBgYGAcwVsYsVkr2ecj+8PTEwMA4gNGG1+T4lfdb3ULAwMDYmjEr6K88AfOSXF3mw8DA2JQxC5p5Eb8dGmuLd2//b2BgYGzHmDUMvvccrL+JgYGxNWPWBvgGfvYALXqtGBgYWzDa5mKeP7bhNSdhYGCcwMgBeTqaPBBzfD0zgoGBsR0jL5O1pf9iVGK0Q9HxwMDAeDhj1jJMgm8UEONhiw/7Y2BgbM1oS2xJWJyNlOXpbj14gYGBsQVjZYRiVrZbH/J4W3TDwMDYmjEcyYoBeUI7/BwDA+MYRn5MXuKfwepKIQYGxqaMq1xtqjkLne25GBgYezNmwW7lmHbka2nYAgMDYyPGepCdNRjaVgQGBgZGO9bQlufqsYk49GNgYGCstznztsHSexYDAwOjvHTeJMj3//AAxcDAOICRhMg2jLZPzPZZiYGBcQ4jTx3/9gm4PmyBgYFxAOMHPmR0crEYNusAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '...';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
