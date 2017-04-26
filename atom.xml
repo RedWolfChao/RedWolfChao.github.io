@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>RedWolf 无奈我是主标题</title>
-  <subtitle>无奈 我是副标题!</subtitle>
+  <title>RedWolf Blog</title>
+  <subtitle>沉默是金</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://joryhe.coding.me/"/>
