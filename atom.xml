@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://joryhe.coding.me/"/>
-  <updated>2017-04-28T02:58:56.766Z</updated>
+  <updated>2017-05-10T09:28:08.807Z</updated>
   <id>http://joryhe.coding.me/</id>
   
   <author>
@@ -14,6 +14,516 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>��׿�ƶ�����(��)-Smail_HelloWorld</title>
+    <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E5%9B%9B)-Smail_HelloWorld.html"/>
+    <id>http://joryhe.coding.me/post/安卓移动逆向(四)-Smail_HelloWorld.html</id>
+    <published>2017-05-08T10:18:18.000Z</published>
+    <updated>2017-05-10T09:28:08.807Z</updated>
+    
+    <content type="html"><![CDATA[<p>###���ֱ�дһ��Smail���͵�HelloWord###</p>
+<p><strong>��ʼ��д</strong></p>
+<p><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!</strong><br><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!</strong><br><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!!!</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#��������</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#���常��</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main&#123;[<span class="class">Ljava/lang/String;</span>&#125;V	<span class="comment">#����main()&lt;������&gt;</span></div><div class="line">	.registers 4	<span class="comment">#������ʹ��v0,v1,v2�Ĵ�����һ�������Ĵ���</span></div><div class="line">	.prologue	<span class="comment">#������ʼָ��</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#û�з���ֵvoid</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
+<p><strong>����һ��HelloWorld�ļܹ�����,������һ���ɱ������е�DEX�ļ�����С���ɲ���,�������ǽ���.prologue(������ʼָ��)�±�д��������:</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="comment">#��ָ��</span><span class="built_in"></span></div><div class="line">nop</div><div class="line">nop<span class="built_in"></span></div><div class="line">nop</div><div class="line"><span class="comment">#���ݶ���ָ��</span><span class="built_in"></span></div><div class="line">const/16 v0, 0x8	<span class="comment">#v0=0x8</span><span class="built_in"></span></div><div class="line">const/4 v1, 0x5		<span class="comment">#v1=0v5</span><span class="built_in"></span></div><div class="line">const/4 v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line"><span class="comment">#���ݲ���ָ��</span><span class="built_in"></span></div><div class="line">move v1, v2		<span class="comment">#v1=v2</span></div><div class="line"><span class="comment">#��������ָ��</span><span class="built_in"></span></div><div class="line">new-array v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span><span class="built_in"></span></div><div class="line">array-length v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line"><span class="comment">#ʵ������ָ��</span><span class="built_in"></span></div><div class="line">new-instance v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line"><span class="comment">#��������ָ��</span></div><div class="line">invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(��ȷ���ǲ���������˼) void init(v1)</span></div><div class="line"><span class="comment">#��תָ��</span><span class="built_in"></span></div><div class="line">if-nez v0,<span class="keyword"> :cond_0</span>	<span class="comment">#����v0!=0;����ת��cond_0</span><span class="built_in"></span></div><div class="line">goto : goto_0		<span class="comment">#�����ͽ���goto_0</span><span class="keyword"></span></div><div class="line">:cond_0			<span class="comment">#cond_0��ʼ</span></div><div class="line"><span class="comment">#����ת��ָ��</span><span class="built_in"></span></div><div class="line">int-to-float v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line"><span class="comment">#��������ָ��</span><span class="built_in"></span></div><div class="line">add-float v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line"><span class="comment">#�Ƚ�ָ��</span><span class="built_in"></span></div><div class="line">cmpl-float v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line"><span class="comment">#�ֶβ���ָ��</span><span class="built_in"></span></div><div class="line">sget-object v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span><span class="built_in"></span></div><div class="line">const-string v1,<span class="string">"HelloWorld"</span> <span class="comment">#�����ַ��� v1 = "HellpWorld"</span></div><div class="line"><span class="comment">#��������ָ��</span></div><div class="line">invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line"><span class="comment">#����ָ��</span><span class="keyword"></span></div><div class="line">:goto_0	<span class="comment">#goto_0 ��ʼ</span></div></pre></td></tr></table></figure>
+<p><strong>���ɴ�������,</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#��������</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#���常��</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main([<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#����main()&lt;������&gt;</span></div><div class="line">	.registers 4	<span class="comment">#������ʹ��v0,v1,v2�Ĵ�����һ�������Ĵ���</span></div><div class="line">	.prologue	<span class="comment">#������ʼָ��</span></div><div class="line">	<span class="comment">#��ָ��</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line">	<span class="comment">#���ݶ���ָ��</span></div><div class="line"><span class="built_in">	const/16 </span>v0, 0x8	<span class="comment">#v0=0x8</span></div><div class="line"><span class="built_in">	const/4 </span>v1, 0x5		<span class="comment">#v1=0v5</span></div><div class="line"><span class="built_in">	const/4 </span>v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line">	<span class="comment">#���ݲ���ָ��</span></div><div class="line"><span class="built_in">	move </span>v1, v2		<span class="comment">#v1=v2</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line"><span class="built_in">	new-array </span>v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span></div><div class="line"><span class="built_in">	array-length </span>v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line">	<span class="comment">#ʵ������ָ��</span></div><div class="line"><span class="built_in">	new-instance </span>v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line">	invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(��ȷ���ǲ���������˼) void init(v1)</span></div><div class="line">	<span class="comment">#��תָ��</span></div><div class="line"><span class="built_in">	if-nez </span>v0,<span class="keyword"> :cond_0</span>	<span class="comment">#����v0!=0;����ת��cond_0</span></div><div class="line"><span class="built_in">	goto </span>: goto_0		<span class="comment">#�����ͽ���goto_0</span></div><div class="line"><span class="keyword">	:cond_0</span>			<span class="comment">#cond_0��ʼ</span></div><div class="line">	<span class="comment">#����ת��ָ��</span></div><div class="line"><span class="built_in">	int-to-float </span>v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line"><span class="built_in">	add-float </span>v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line">	<span class="comment">#�Ƚ�ָ��</span></div><div class="line"><span class="built_in">	cmpl-float </span>v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line">	<span class="comment">#�ֶβ���ָ��</span></div><div class="line"><span class="built_in">	sget-object </span>v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span></div><div class="line"><span class="built_in">	const-string </span>v1,<span class="string">"HelloWorld"</span> <span class="comment">#�����ַ��� v1 = "HellpWorld"</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line">	invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line">	<span class="comment">#����ָ��</span></div><div class="line"><span class="keyword">	:goto_0</span>	<span class="comment">#goto_0 ��ʼ</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#û�з���ֵvoid</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
+<p><strong>Ȼ�����ǿ���ͨ������java -jar E:\Reverse\smali_baksmali\smali.jar -o classes.dex HelloWorld.smali����Smali�ļ�������dex�ļ�(������”E:\Reverse\smali_baksmali\smali.jar”Ҫ�������˻��������Ͳ���������·����,������Ҳ��һ��)</strong></p>
+<p><strong>����û�б���,�ͻ��ڵ�ǰĿ¼������classes.dex(�����˾͸�����ʾ�����ͺ�)</strong></p>
+<p><strong>Ȼ�����ǽ�classes.dexѹ��ΪHelloWorld.zip</strong></p>
+<p><strong>���Ե�ʱ��Ҫ��֤��������һ���ֻ�(��Root)������һ��ģ����</strong></p>
+<p><strong>ִ��adb push HelloWorld.zip /data/local/ </strong></p>
+<p><strong>�е�ͯЬ���ܻᱨ������������</strong></p>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><div class="line">adb server version (31) doesn't match this client (39)</div><div class="line">* daemon started successfully * </div><div class="line"><span class="keyword">error: </span>no devices/emulators found</div></pre></td></tr></table></figure>
+<p><strong>ԭ�����°�adb����,�������ؾɰ���adb�þɰ���adb���м���</strong></p>
+<p><strong>����,ִ��adb shell dalvikvm -cp /data/local/HelloWorld.zip HelloWorld�Ϳ�����,��ͼ</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170414185954352?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9814373" target="_blank" rel="external">������Smali.jar</a></p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9814423" target="_blank" rel="external">�����Ǿɰ���adb</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###���ֱ�дһ��Smail���͵�HelloWord###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;��ʼ��д&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!&lt;/strong&gt;&lt;br&gt;&lt;strong
+    
+    </summary>
+    
+    
+      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>��׿�ƶ�����(��)-Android Dalvik������</title>
+    <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E4%B8%89)-Android%20Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA.html"/>
+    <id>http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html</id>
+    <published>2017-05-03T05:13:13.000Z</published>
+    <updated>2017-05-10T09:27:37.239Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>���Ҷ�֪��Java������������Java��������,Android������?</strong><br><strong>��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual Machine,Ҳ����Dalvik��������</strong></p>
+<p><strong>��ƪ����:</strong></p>
+<ul>
+<li>ɨäDalvik������</li>
+<li><strong>�˽�Smail���﷨,�ܶ���Smail�ļ�</strong></li>
+</ul>
+<p>###Dalvik����###</p>
+<p>####Dalvik���ص�(������JVM)####</p>
+<ul>
+<li>����С,ռ���ڴ�С;</li>
+<li>ר�е�DEX��ִ���ļ���ʽ,������С,ִ���ٶȸ���;</li>
+<li>�����ز���32λ����ֵ,Ѱַ�෽����,�ֶ���,��������;</li>
+<li>���ڼĴ����ܹ�,��ӵ��һ�����ɵ�ָ��ϵͳ</li>
+<li>�ṩ�˶����������ڹ���,��ջ����,�̹߳���,��ȫ���쳣�����Լ��������յ���Ҫ����;</li>
+<li>���е�Android������������Androidϵͳ������,ÿ�����̶�Ӧ��һ��Dalvik������ʵ��;</li>
+</ul>
+<hr>
+<p>####Dalvik��������Java������������####</p>
+<ol>
+<li>Java���������е�Java�ֽ���,Dalvik���������е���Dalvik�ֽ���</li>
+<li><p><strong>Dalvik��ִ���ļ���������С</strong><br>��������:<br>SDK����һ������dx�Ĺ��߸�����Java�ֽ���ת��ΪDalvik�ֽ���.dx���߶�Java���ļ���������,���������ļ��г��ֵ�����������Ϣ,�����������ڳ�ʼ��ʱ�����ظ����ļ���������������.</p>
+<p>�ٸ�����:<br>��Java���д������ַ��������ڶ������ļ��б��ظ�ʹ��,��Щ������Ϣ��ֱ�������ļ�������,ͬ��Ҳ������Ӱ�������������ļ���Ч��.dx��������������������ר�ŵĴ���,��������Java���ļ��еĳ����ؽ��зֽ�,�������е�������Ϣ,�������ϳ�һ��������,���е����ļ�����ͬһ��������.dx����ת��������ͼ��ʾ,����dx���߶Գ����ص�ѹ��,�ǵ���ͬ���ַ���,������DEX�ļ���ֻ����һ��,�Ӷ���С���ļ�������.</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="dx����ת������" title="">
+                </div>
+                <div class="image-caption">dx����ת������</div>
+            </figure>
+<ol>
+<li><p><strong>Java��������Dalvik�������ܹ���ͬ</strong></p>
+<p>����˵һ��:Java����������ջ�ܹ�,Dalvik���ڼĴ����ܹ�;</p>
+</li>
+</ol>
+<hr>
+<p>###Dalvikָ����ʽ###</p>
+<p><strong>һ��Dalvik����������һϵ�е�Dalvikָ������,ָ���﷨��ָ����λ������ָ����ʽ��ʶ������.λ����Լ������</strong></p>
+<ul>
+<li>ÿ16λ���ֲ��ÿո��ָ��;</li>
+<li>ÿ����ĸ��ʾ��λ,ÿ����ĸ��˳���Ӹ��ֽڿ�ʼ,���е����ֽ�.ÿ��λ֮��<strong>����</strong>������”|”����ʾ��ͬ������;</li>
+<li>˳������A-Z�ķ�����д��ĸ��Ϊһ��4λ�Ĳ�����,op��ʾһ��8λ�Ĳ�����;</li>
+<li>“?”����ʾ�����ֶε�����λΪ0ֵ;</li>
+</ul>
+<p><strong>����</strong><br>  “A|B|op BBBB F|E|D|C”<br>  ָ���м��������ո�,ÿ���ֿ��Ĳ�����16λ,����3��16λ��������ָ��;<br>  ��һ��16λ��”A|B|op” ��8λ��A��B����,���ֽ��ɲ�����op����;<br>  �ڶ���16λ��BBBB����,����ʾһ��16λ��ƫ��ֵ;<br>  ������16λ�ֱ���F,E,D,C���ĸ��ֽ�����,���������Ǳ�ʾ�Ĵ����Ĳ���.</p>
+<p><strong>����ʹ��λ��ʶ���޷�ȷ��һ��ָ������˼,����ͨ��ָ����ʽ��ʶ��ָ��ָ���ĸ�ʽ����,Լ������</strong></p>
+<ul>
+<li>ָ����ʽ��ʶ�����������ַ�����,ǰ����������,����һ������ĸ;</li>
+<li>��һ������ʽ��ʶָ���ɶ��ٸ�16λ��������;</li>
+<li>�ڶ������ֱ�ʶָ������ʹ�üĴ����ĸ���,��������”r”��ʶʹ��һ����Χ�ڵļĴ���;</li>
+<li>��������ĸΪ������,��ʶָ���õ��Ķ������ݵ�����,����ͼ:</li>
+<li><p>����һ������������ ��ĩβ���ܻ���������һ����ĸ,������”s”��ʾָ�����þ�̬����,������”i”��ʾָ��Ӧ�ñ���������.</p>
+<p><img src="http://img.blog.csdn.net/20170413152723245?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="ָ����ʽ��ʶ��������"></p>
+</li>
+</ul>
+<p><strong>����</strong></p>
+<p>“22x” ��������Ϣ���Զ���</p>
+<ol>
+<li>ָ����2��16λ������</li>
+<li>ָ��ʹ��2���Ĵ���</li>
+<li>û��ʹ�õ�����������</li>
+</ol>
+<p><strong>����,Dalvikָ�����﷨����һЩ˵��,Լ������</strong></p>
+<ul>
+<li>ÿ��ָ���Ӳ����뿪ʼ,������������,������������,ÿ������֮�����ö��ŷֿ�;</li>
+<li>ÿ��ָ���Ĳ�����ָ���ĵ�һ���ֿ�ʼ,opλ�ڵ�8λ,��8λ������һ��8λ�Ĳ���Ҳ����������4λ�Ĳ���,������Ϊ��.����ָ���16λ,�������Ĳ���������Ϊ����;</li>
+<li>��������ʹ��”vX”�ķ�ʽ��ʶ,��������һ���Ĵ���,��v0,v1��;</li>
+<li>������������”#+X”�ķ�ʽ,��������һ����������;</li>
+<li>������������”+X”�ķ�ʽ,��������һ������ָ���ĵ�ַƫ��;</li>
+<li>������������”kind@X”�ķ�ʽ,��������һ������������ֵ.����kind��ʾ����������,����string@BBBB,��ʾ�ľ����ַ�������������BBBB;</li>
+</ul>
+<p><strong>����</strong><br>“op vAA string@BBBB”<br>��8λΪ��,�õ�1���Ĵ�������vAA,���õ�һ���ַ�������������BBBB;</p>
+<hr>
+<p>###Dalvik�Ĵ���###</p>
+<p><strong>ɨä������,��ʼ�ص���</strong></p>
+<p>####Dalvik�ֽ���������,����,���ֶα�ʾ����####</p>
+<ol>
+<li><strong>����</strong><br>Dalvik�ֽ���ֻ����������,����������,������˵,��ͼ;<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413155625862?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                </div>
+                <div class="image-caption">����</div>
+            </figure>
+ÿ��Dalvik�Ĵ�������32λ��С,����С�����ߵ���32λ���ȵ�������˵,һ���Ĵ����Ϳ��Դ��Ÿ����͵�ֵ,����J(long),D(double)��64λ������,���ǵ�ֵ��ʹ�����������Ĵ������洢��,v0��v1����vN��vN+1��;<br>L�ͺ�������,��ʾ�κ�һ��Java��,��Dalvik����������,������” Lpackage/name/ObjectName; “��ʾ,ע������һ���ֺ�,����” Ljava/lang/String;”�൱��String;<br>[���;������е�����,[���������������͵�������,��[I��ʾһ������һά����,-&gt;int[],[[I��ʾint[][]&lt;—&gt; [Ljava/lang/String; ��ʾ�������� String [];</li>
+<li><strong>����</strong><br>Dalvikʹ�÷�����,���Ͳ����뷵��ֵ������һ������;<br>��ʽ����:<br>Lpackage/name/ObjectName;-&gt;MethodName(III)Z<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>MethodName������<br>(III)����,����int����<br>Z����ֵvoid<br><strong>����</strong><br>method(I[[IILjava/lang/String;[Ljava/lang/String;)Ljava/lang/String;<br>�ȿ�,����������֪ʶ,����ת��ΪJava��ʽ�Ĵ���Ϊ:<br>String method(int ,int[][],String,String[])</li>
+<li><strong>�ֶ�</strong><br>�ֶκͷ���������,����û�в����ͷ���ֵ,ȡ����֮�����ֶε�����,��ʽ����<br>Lpackage/name/ObjectName;-&gt;FieldName:TYPE<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>FieldName�ֶ���<br>TYPE�ֶ�����<br>FieldName��TYPE��ð�Ÿ���<br><strong>����</strong><br>name:Ljava/lang/String;<br>ת��:<br>String name;<br><strong>Dalvik�����е��ֶδ�����.fieldָ�ͷ,�����ֶ����Ͳ�ͬ,���ֶ�ָ���Ŀ�ʼ,���ܻ��õ�����”#”����ע��</strong>;</li>
+</ol>
+<hr>
+<p>###Dalvikָ�###</p>
+<p>####ָ���ص�####</p>
+<p>Dalvikָ���ڵ��ø�ʽ��ģ����C���Եĵ���Լ��.Dalvikָ���﷨�����ʷ��������ص�:</p>
+<ul>
+<li>�������ô�Ŀ��(destination)��Դ(source)�ķ�ʽ;</li>
+<li>�����ֽ����Ĳ�����ѡ���Ĳ�ͬ,һЩ�ֽ����������ֽ�����׺��������,��Щ��׺ͨ�����ֽ��������ƺ�����б��”/“���ָ���;</li>
+<li>��ָ���������,����ֵ�е�ÿ����ĸ��ʾ����Ϊ4λ;</li>
+<li>�����ֽ����Ĵ�С�����͵Ĳ�ͬ,һЩ�ֽ������������ƺ�׺����������:<ul>
+<li>32λ�������͵��ֽ���,δ�����κκ�׺;</li>
+<li>64λ�������͵��ֽ�����-wide��׺;</li>
+<li>�������͵��ֽ������ݾ����������Ӻ�׺,���ǿ�����-boolean,-byte,-char,-short,-int,-long,-float,-double,-object,-string,-class,-void֮һ;</li>
+</ul>
+</li>
+</ul>
+<p><strong>����</strong><br>“move-wide/from16 vAA,vBBBB”</p>
+<p>moveΪ�����ֽ���.��ʶ���ǻ�������;<br>wideΪ���ƺ�׺.��ʶָ�����������ݿ���(64λ);<br>from16λ�ֽ�����׺.��ʶԴΪһ��16λ�ļĴ������ñ���;<br>vAAΪĿ�ļĴ���,��ʼ����Դ��ǰ�� ȡֵ��ΧΪv0-v2^8-1(255);<br>vBBBBΪԴ�Ĵ���,ȡֵ��ΧΪv0-v2^16-1(65535)</p>
+<p><strong>�ղ���ָ��</strong></p>
+<p>�ղ���ָ�������Ƿ�Ϊnop,����ֵ��00,ͨ��nopָ��ù�����������;,ûɶ����;</p>
+<p><strong>���ݲ���ָ��</strong></p>
+<p>���ݲ���ָ��Ϊ<strong>move</strong>.moveָ����ԭ��Ϊmove destination,source����move destination,moveָ�������ֽ����Ĵ�С�����Ͳ�ͬ,���������ϲ�ͬ�ĺ�׺.<br><strong>����(��ʾ̫��ֱ����ͼ,�����)</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413171403627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="���ݲ���ָ��" title="">
+                </div>
+                <div class="image-caption">���ݲ���ָ��</div>
+            </figure>
+<p><strong>����ָ��</strong></p>
+<p>����ָ��ָ���Ǻ�����βʱ���е�����һ��ָ��.���Ļ����ֽ���λ<strong>return</strong>,����������������ָ��<br><strong>����</strong></p>
+<ol>
+<li>“return-void” ����һ��void</li>
+<li>“return vAA” ����һ��32λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+<li>“return-wide vAA” ����һ��64λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+<li>“return-object vAA” ����һ���������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+</ol>
+<p><strong>���ݶ���ָ��</strong></p>
+<p>���ݶ���ָ�����������������õ��ı���,�ַ���,��������,���Ļ����ֽ���Ϊ<strong>const</strong><br><strong>����(��ʾ̫��ֱ����ͼ-_-)</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413172400594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413172418327?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure></p>
+<p><strong>��ָ��</strong></p>
+<p>��ָ�������ڶ��̳߳����ж�ͬһ�����Ĳ���,Dalvikָ�����������ָ��.</p>
+<ol>
+<li>“monitor-enter vAA” Ϊָ���Ķ�����ȡ��</li>
+<li>“monitor-exit vAA”Ϊָ���Ķ����ͷ���</li>
+</ol>
+<p><strong>ʵ������ָ��</strong></p>
+<p>��ʵ�����صĲ�������ʵ�������ʹ���,���鼰�½���;</p>
+<ul>
+<li>“check-case vAA,type@BBBB” ��vAA�еĶ�������ǿתΪBBBB����;</li>
+</ul>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><div class="line">(<span class="name">BBBB</span>)vAA<span class="comment">;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>“instance-of vA,vB,type@CCCC” �ж�vB�еĶ��������Ƿ���ת��CCCC����,��vA=1,����vA=0;</li>
+</ul>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(vB.<span class="keyword">instanceof</span>(type<span class="meta">@CCCC</span>))&#123;</div><div class="line">	vA =<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	vA = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>“new-instance vAA,type@BBBB” �½�һ��BBBB�Ķ���vAA,BBBB����Ϊ����</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">BBBB vAA</span> = new BBBB();</div></pre></td></tr></table></figure>
+<ul>
+<li>“check-cast/jumbo vAAAA,type@BBBBBBBB” ��”check-case vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+<li>“instance-of/jumbo vAAAA,vBBBB,type@CCCCCCCC”��”instance-of vAA,vBB,type@CCCC”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+<li>“new-instance/jumbo vAAAA,type@BBBBBBBB”��”new-instance vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+</ul>
+<p><strong>��������ָ��</strong></p>
+<p>��������������ȡ���鳤��(ָ������������Ŀ����),�½�����,���鸳ֵ,����Ԫ��ȡֵ�븳ֵ�Ȳ���;</p>
+<ul>
+<li>“array-length vA,vB” </li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = vB.length<span class="comment">; //	��vB�ĳ��ȸ�ֵ��vA</span></div></pre></td></tr></table></figure>
+<ul>
+<li>“new-array vA,vB,type@CCCC”</li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = CCCC[vB]<span class="comment">; //	����һ��vB����CCCC���͵����鸳ֵ��vA</span></div></pre></td></tr></table></figure>
+<ul>
+<li>�����ĸ�ͼ<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413174546498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+</li>
+</ul>
+<p><strong>�쳣ָ��</strong></p>
+<p>Dalvik ָ�����һ��ָ�������׳��쳣</p>
+<ul>
+<li>“throw vAA” �׳�vAA�Ĵ�����ָ�����͵��쳣</li>
+</ul>
+<p><strong>��תָ��</strong></p>
+<p>Dalvikָ�����������תָ��:��������ת(goto),��֧��ת(switch),������ת(if)</p>
+<ul>
+<li>“goto +AA” ��������ת��ָ��ƫ�ƴ�,ƫ����AA����Ϊ0;</li>
+<li>“goto/16+AAAA” ��������ת��ָ��ƫ�ƴ�,ƫ����AAAA����Ϊ0;</li>
+<li>“goto/32+AAAAAAAA” ��������ת��ָ��ƫ�ƴ�;</li>
+<li>“packed-switch vAA,+BBBBBBBB” ��֧��תָ��. vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��packed-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ�ǹ��ɵ�����.(����ô��ס�ͺ�,����Ȥ�����Ұٶ�..)</li>
+<li>“sparse-switch vAA,+BBBBBBBB”��֧��תָ��,vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��sparse-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ���޹��ɵ�ƫ����.</li>
+<li>“if-test vA,vB,+CCCC” ������תָ��,�Ƚ�vA��vB��ֵ,�����ȽϽ�����������ת��CCCCָ����ƫ�ƴ�,ƫ����CCCC����Ϊ0,if-test���͵�ָ�������¼���:<ul>
+<li>��if-eq vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
+<li>��if-ne vA, vB, :cond_xx�� ����vA������vB����ת��:cond_xx </li>
+<li>��if-lt vA, vB, :cond_xx�� ����vAС��vB����ת��:cond_xx </li>
+<li>��if-ge vA, vB, :cond_xx�� ����vA���ڵ���vB����ת��:cond_xx </li>
+<li>��if-gt vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
+<li>��if-le vA, vB, :cond_xx�� ����vAС�ڵ���vB����ת��:cond_xx </li>
+</ul>
+</li>
+<li>“if-testz vAA,+BBBB”������תָ��,��vAA��0���Ƚ�,�����������߲�������������ת��BBBB��ָ��ƫ�ƴ�BBBB����Ϊ0, if-testz���͵�ָ�������¼���:<ul>
+<li>��if-eqz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
+<li>��if-nez vA, :cond_xx�� ����vA������0����ת��:cond_xx </li>
+<li>��if-ltz vA, :cond_xx�� ����vAС��0����ת��:cond_xx </li>
+<li>��if-gez vA, :cond_xx�� ����vA���ڵ���0����ת��:cond_xx </li>
+<li>��if-gtz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
+<li>��if-lez vA, :cond_xx�� ����vAС�ڵ���0����ת��:cond_xx</li>
+</ul>
+</li>
+</ul>
+<p><strong>�Ƚ�ָ��</strong></p>
+<p>�Ƚ�ָ�����ڶ������Ĵ�����ֵ(�����ͻ��߳�����)���бȽϸ�ʽΪ:<br>“cmpkind vAA,vBB,vCC” </p>
+<p>Dalvikָ��й���5���Ƚ�ָ��:</p>
+<ul>
+<li><p>“cmpl-float” �Ƚ�����floatֵ;</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>“cmpg-float” �Ƚ�����float��ֵ</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>��cmpg����cmpʱ,B &gt; CʱA = 1,��֮-1;��cmplʱ,B &gt; CʱA = -1��֮1;</strong></p>
+<ul>
+<li>“cmpg-double” �Ƚ�����double��ֵ</li>
+<li>“cmpl-double” �Ƚ�����double��ֵ</li>
+<li>“cmp-long” �Ƚ�����long��ֵ</li>
+</ul>
+<p><strong>�ֶβ���ָ��</strong></p>
+<p>�ֶβ���ָ�������Զ���ʵ�����ֶν��ж�д����.<br>�ֶε����Ϳ�����Java����Ч����������,����ͨ�ֶ��뾲̬�ֶβ���������ָ�,�ֱ���”iinstanceop vA,vB,field@CCCC”��”sstaticop vAA,field@BBBB”.<br>��Android 4.0ϵͳ��,��”iinstanceop /jumbovAAAA,vBBBB,field@CCCCCCCC”��”sstaticop/jumbo vAAAA,field@BBBBBBBB”.������������������ͬ,ֻ�Ǽ���jmpbo��׺,�Ĵ�����ָ������ȡֵ��Χ����(������ֻ��˵��/jumboָ����׺��ָ�,���þͲ�ָ����)<br>��ͨ�ֶ�ָ����ָ��ǰ׺Ϊi,��.����ͨ�ֶζ�����ʹ��igetָ��,д����ʹ��iputָ��;��̬�ֶε�ָ��ǰ׺Ϊs,��.�Ծ�̬�ֶεĶ�����Ϊsget,д����Ϊsput;<br>���ݷ��ʵ��ֶ����Ͳ�ͬ,�ֶβ���ָ�������������ֶ����͵ĺ�׺,��iget-byteָ����ʾ��ȡʵ���ֶε�ֵ����Ϊbyte;</p>
+<p><strong>��������ָ��</strong><br>��������ָ���������ʵ���ķ���,���Ļ���ָ��Ϊinvoke,��������ָ����”invoke-kind{vC,vD,vE,vF,vG},meth@BBBB”��”invoke-kind/range{vCCCC…VNNNN},meth@BBBB”����,������ָ������ûɶ��ͬ,���������ò����Ĵ���ʱʹ����range��ָ���Ĵ����ķ�Χ,���ݷ������͵Ĳ�ͬ,��������5����������ָ��:</p>
+<ol>
+<li>“invoke-virtual” ����ʵ�����鷽��</li>
+<li>“invoke-super” ����ʵ���ĸ��෽��</li>
+<li>“invoke-direct” ����ʵ����ֱ�ӷ���</li>
+<li>“invoke-static” ����ʵ���ľ�̬����</li>
+<li>“invoke-interface” ����ʵ���Ľӿڷ���<br>Android 4.0��jumbo��ָ�;</li>
+</ol>
+<p>��������ָ���ķ���ֵ����ʹ��move-result*ָ������ȡ:<br>invoke-static{},Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;<br>move-result-object v0;</p>
+<p><strong>����ת��ָ��</strong><br>����ת��ָ�����ڽ�һ�����͵���ֵת��Ϊ��һ������,���ĸ�ʽΪ”unop vA,vB” ��vB�е�������һ������(ת��)����vA��:(�Ƚϼ���,ֱ����ͼ)</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413185529172?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><strong>��������ָ��</strong></p>
+<p>��������ָ��������������ָ�����߼�����ָ��:</p>
+<ul>
+<li>��������ָ��:��,��,��,��,ģ,��λ��</li>
+<li>�߼�����ָ��:����,��,��,�ֻ���;<br>�ϸ�ͼ��<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413185946687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+���л����ֽ���������-type������-int,-long,-float,-double,����3��ָ��Ҳ���,�Ͳ�����,������ͨ;</li>
+</ul>
+<p><strong>=<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= </strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;���Ҷ�֪��Java������������Java��������,Android������?&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ�����
+    
+    </summary>
+    
+    
+      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>��׿�ƶ�����(��)</title>
+    <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E4%BA%8C).html"/>
+    <id>http://joryhe.coding.me/post/安卓移动逆向(二).html</id>
+    <published>2017-05-02T04:12:12.000Z</published>
+    <updated>2017-05-10T09:26:03.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>###Сʵ��–�ƽ�һ��С����###</p>
+<p><strong>�����ƽ�</strong></p>
+<p>�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,�������в���,����ѭ��,ֱ�����򱻳ɹ��ƽ�.</p>
+<p><strong>��Ҫ����</strong></p>
+<p> <a href="http://download.csdn.net/detail/redwolfchao/9807486" target="_blank" rel="external">���빤�� : ApkTool</a></p>
+<p>ǩ������: SignApk : ���ӣ�<a href="http://pan.baidu.com/s/1miwl6lU" target="_blank" rel="external">http://pan.baidu.com/s/1miwl6lU</a> ���룺ze44</p>
+<p>������֮�� ��ѹĿ¼��path�������� �㶮��</p>
+<hr>
+<p><strong>׼��</strong></p>
+<p>�����Ƚ���һ���Լ���App,����������(PS:��Ը���Լ�����Դ������)</p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9807302" target="_blank" rel="external">���ƽ�����</a></p>
+<p>���ܾ��Ǹ����������û�������ע����,�ж�������ע������ϵͳ�㷨���ɵ�ע�����Ƿ�һ��,һ����ע���ɹ�,��������,�����򲻿���;</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                </div>
+                <div class="image-caption">����</div>
+            </figure>
+<p><strong>�������Ĵ���</strong></p>
+<figure class="highlight pony"><table><tr><td class="code"><pre><div class="line">findViewById(<span class="type">R</span>.id.act_main_btn).setOnClickListener(<span class="function"><span class="keyword">new</span> <span class="title">View</span>.<span class="title">OnClickListener</span>() &#123;</span></div><div class="line">    @<span class="title">Override</span></div><div class="line">    <span class="title">public</span> <span class="title">void</span> <span class="title">onClick</span>(<span class="type">View</span> v) &#123;</div><div class="line">        <span class="title">String</span> <span class="title">userName</span> = <span class="title">etUser</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">String</span> <span class="title">sn</span> = <span class="title">etSN</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">if</span> (checkSN(userName, sn)) &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_register, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">            <span class="title">tvTitle</span>.<span class="title">setText</span>(<span class="type">R</span>.string.string_success_register);</div><div class="line">        &#125; <span class="title">else</span> &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_unregister, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>��ʼ�ƽ�</strong></p>
+<p>����������Ҫ��apktool d appname.apk  ���з�����  ��ͼ</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="������" title="">
+                </div>
+                <div class="image-caption">������</div>
+            </figure>
+<p>Ȼ��������һ��appName���ļ��� �������� ��Щsmali���ļ���</p>
+<p>֮�����ǵ�Ŀ�� ���ҵ�ͻ�ƿ�,ʲô��ͻ�ƿ�? </p>
+<p><strong><em>����Button֮������ʾ���־���ͻ�ƿ�</em></strong></p>
+<p>���ǽ���values�е�string.xml���ҿ�</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170407190631738?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=".." title="">
+                </div>
+                <div class="image-caption">..</div>
+            </figure>
+<p><strong>����Android����ʱ,String.xml�ļ��е������ַ�����Դ����”gen/<packagename>/R.java”�ļ���String���б���ʶ,ÿ���ַ�������Ψһ��int��������ֵ,ʹ��ApkTool������Apk�ļ���,���е�����ֵ������string.xml�ļ�ͬĿ¼�µ�public.xml��</packagename></strong></p>
+<p>����string_unregister��public.xml��</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408091202516?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p>���Ƿ���string_unregister����Ӧ��idΪ 0x7f060027 </p>
+<p><strong>����˵��Ҫȫ������smali�ļ����а���0x7f060027�ļ���λ��,����֪������MainActivity��������,ֱ�ӽ��뼴��(PS:����,�Ҳ�֪������ȫ�������ļ��ڵ�����)</strong></p>
+<p>���ǽ���MainActivity$1.smali����0x7f060027   ��ͼ</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408091511625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p>��������</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408091635813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><strong>��ͼ�޸�֮��,���ǽ���app�ļ���,�ٴα�����������dist������һ��app,��������ǩ��(��ǩ�����޷����в��Ե�) ��ͼ</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408091706813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><strong>Ȼ�����ǽ���ǩ��,���������ص�signapk����,����-&gt;��ǩ����App  ��ͼ</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure></p>
+<p><strong>����֮�� ���ǿ���ͨ��adb install signed.apk ��װ���ֻ����� Ҳ���Ը��Ƶ��ֻ���ֱ�Ӱ�װ,Ŷ,���ܻᱨ��</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><strong>���ֻ��ϵ���ͬAppж���˼���</strong></p>
+<p><strong>��װ֮��,��������</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p>�ο��鼮: <a href="http://download.csdn.net/detail/redwolfchao/9807301" target="_blank" rel="external">Android������ȫ����������</a> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###Сʵ��–�ƽ�һ��С����###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;�����ƽ�&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ�
+    
+    </summary>
+    
+    
+      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>��׿�ƶ�����(ɨä)</title>
+    <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E6%89%AB%E7%9B%B2).html"/>
+    <id>http://joryhe.coding.me/post/安卓移动逆向(扫盲).html</id>
+    <published>2017-05-01T03:11:11.000Z</published>
+    <updated>2017-05-10T09:26:34.367Z</updated>
+    
+    <content type="html"><![CDATA[<p>###Android ���� ###</p>
+<p><strong>ûɶ��˵��,��ɨһ��ä</strong></p>
+<hr>
+<p>###APK ���� ###</p>
+<p><strong>asset�ļ��У�</strong><br><strong>��ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����</strong><br><strong>res�ļ��� ����ԴĿ¼2��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>classes.dex  ��Java���������õ���Dalvik VM��ֱ��ִ�е��ļ��������н���</strong></p>
+<p><strong>resĿ¼�µ���Դ�ļ��ڱ���ʱ���Զ����������ļ���R.java������Java��������R.xxx.yyy�����ã�</strong><br><strong>��assetĿ¼�µ���Դ�ļ�����Ҫ������������Java��������Ҫ��AssetManager�����ʣ�</strong></p>
+<p><strong>һ����˵��������Ƶ����Ƶ��Դ����Ҫ����raw��asset�£���ʹ��Java������Android����ʹ�õ�����Դ�ļ���������res�£�ʹ��C++��Ϸ���棨��ʹ��Lua Unity3D�ȣ�����Դ�ļ�����Ҫ����asset�¡�</strong></p>
+<hr>
+<p>###Dalvik �ֽ��� ###</p>
+<p><strong>Dalvik�ֽ�����ʲô��</strong></p>
+<p>Dalvik�ֽ�����ѧϰ�ƽ��Ļ���������������Ҫ�˽�һ��</p>
+<p>Dalvik��googleר��ΪAndroid����ϵͳ���Ƶ�һ�����������������ȵ��Ż�����ȻAndroid�ϵĳ�����ʹ��java�������ģ�����Dalvik�ͱ�׼��java������JVM���������¡�Dalvik VM�ǻ��ڼĴ����ģ���JVM�ǻ���ջ�ģ�Dalvik��ר�����ļ�ִ�и�ʽdex��dalvik executable������JVM��ִ�е���java�ֽ��롣Dalvik VM��JVM�ٶȸ��죬ռ�ÿռ����١�</p>
+<p>ͨ��Dalvik���ֽ������ǲ���ֱ�ӿ���ԭ�����߼����룬��ʱ��Ҫ������Apktool��dex2jar+jd-gui�����������鿴�����ǣ�ע���������������޸�APK��Ҫ�������ļ���.smali�ļ��������ǵ�������Java�ļ����±��롣</p>
+<hr>
+<p>###Smali–�ƽ�������֮��###</p>
+<p><strong>ʲô��Smali��</strong></p>
+<p><strong>Smali��Baksmali�ֱ���ָ��׿ϵͳ����Java��������Dalvik����ʹ�õ�һ�֡�dex��ʽ�ļ��Ļ��������������������﷨��һ�ֿ���ʽ��Jasmin/dedexer�﷨��������ʵ����.dex��ʽ���й��ܣ�ע�⣬������Ϣ����·��Ϣ�ȣ�</strong></p>
+<p><strong>�����Ƕ�APK�ļ����з������󣬱������ɴ������ļ���С���ڴ˶�smali�ļ����м�Ҫ�Ľ��ܡ�������Davlik�ֽ����У��Ĵ�������32λ�ģ��ܹ�֧���κ����ͣ�64λ���ͣ�Long/Double����2���Ĵ�����ʾ��Dalvik�ֽ������������ͣ�ԭʼ���ͣ��������ͣ��������������飩</strong></p>
+<p><strong><em>ԭʼ����</em></strong></p>
+<p>B—byte<br>C—char<br>D—double<br>F—float<br>I—int<br>J—long<br>S—short<br>V—void<br>Z—boolean<br>[XXX—array<br>Lxxx/yyy—object</p>
+<p><strong>����������������������ı�ʾ��ʽ�ǣ��ڻ�������ǰ����ǰ�����š�[��������int������float�����ֱ���ʾΪ��[I��[F�������ı�ʾ����L��Ϊ��ͷ����ʽ��LpackageName/objectName;��ע�������и��ֺŸ������󣩣�����String������smali��Ϊ��Ljava/lang/String;������java/lang��Ӧjava.lang����String���Ƕ����ڸð��е�һ��������</strong></p>
+<p><strong>���������ʣ���Ȼ������LpackageName/objectName;����ʾ�������������ڲ�����������smali��������?�����ǣ�LpackageName/objectName$$subObjectName;��Ҳ�������ڲ���ǰ�ӡ�$�����ţ����ڡ�$�����Ÿ����Ĺ������ں���̸����</strong></p>
+<p><strong>�����Ķ���һ��Ϊ��     Func-Name (Para-Type1Para-Type2Para-Type3…)Return-Type     ע������������֮��û���κηָ�����ͬ���ټ������Ӿ����������ˣ�     1. hello ()V         û����������void hello()��     2. hello (III)Z         ��������boolean hello(int, int, int)��     3. hello (Z[I[ILjava/lang/String;J)Ljava/lang/String;         ����������String hello (boolean, int[], int[], String, long) ������</strong></p>
+<hr>
+<p><strong><em>Smali�����﷨</em></strong></p>
+<p>.field private isFlag:z������������<br>.method��������<br>.parameter������������<br>.prologue����������ʼ<br>.line 123�����˷���λ�ڵ�123��<br>invoke-super�������ø�����<br>const/high16  v0, 0x7fo3������0x7fo3��ֵ��v0<br>invoke-direct�������ú���<br>return-void������������void<br>.end method������������<br>new-instance��������ʵ��<br>iput-object����������ֵ<br>iget-object�������ö���<br>invoke-static�������þ�̬����</p>
+<p>������ת��֧��</p>
+<p>“if-eq vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-ne vA, vB, :cond_xx”   ����vA������vB����ת��:cond_xx<br>“if-lt vA, vB, :cond_xx”    ����vAС��vB����ת��:cond_xx<br>“if-ge vA, vB, :cond_xx”   ����vA���ڵ���vB����ת��:cond_xx<br>“if-gt vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-le vA, vB, :cond_xx”    ����vAС�ڵ���vB����ת��:cond_xx<br>“if-eqz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-nez vA, :cond_xx”   ����vA������0����ת��:cond_xx<br>“if-ltz vA, :cond_xx”    ����vAС��0����ת��:cond_xx<br>“if-gez vA, :cond_xx”   ����vA���ڵ���0����ת��:cond_xx<br>“if-gtz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-lez vA, :cond_xx”    ����vAС�ڵ���0����ת��:cond_xx</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###Android ���� ###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ûɶ��˵��,��ɨһ��ä&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;###APK ���� ###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;asset�ļ��У�&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;�
+    
+    </summary>
+    
+    
+      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Lambda表达式--Java 8 新特性</title>
@@ -393,28 +903,6 @@
     
     
       <category term="Material_Design" scheme="http://joryhe.coding.me/tags/Material-Design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我是测试文件</title>
-    <link href="http://joryhe.coding.me/post/%E6%B5%8B%E8%AF%952.html"/>
-    <id>http://joryhe.coding.me/post/测试2.html</id>
-    <published>2017-04-24T03:05:40.000Z</published>
-    <updated>2017-04-26T03:02:35.010Z</updated>
-    
-    <content type="html"><![CDATA[<p>###然而我是测试的Mark###</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 无奈</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 无奈我是测试文件</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###然而我是测试的Mark###&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://joryhe.coding.me/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

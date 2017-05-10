@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>��׿�ƶ�����(ɨä) | RedWolfChao Blog | 沉默是金</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Android����">
+    <meta name="description" content="###Android ���� ### ûɶ��˵��,��ɨһ��ä  ###APK ���� ### asset�ļ��У���ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����res�">
+<meta name="keywords" content="Android����">
+<meta property="og:type" content="article">
+<meta property="og:title" content="��׿�ƶ�����(ɨä)">
+<meta property="og:url" content="http://joryhe.coding.me/post/安卓移动逆向(扫盲).html">
+<meta property="og:site_name" content="RedWolfChao Blog">
+<meta property="og:description" content="###Android ���� ### ûɶ��˵��,��ɨһ��ä  ###APK ���� ### asset�ļ��У���ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����res�">
+<meta property="og:updated_time" content="2017-05-10T09:26:34.367Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="��׿�ƶ�����(ɨä)">
+<meta name="twitter:description" content="###Android ���� ### ûɶ��˵��,��ɨһ��ä  ###APK ���� ### asset�ļ��У���ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����res�">
+    
+        <link rel="alternate" type="application/atom+xml" title="RedWolfChao Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/my_icon.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">RedWolfChao</h5>
+          <a href="mailto:18811055601@163.com" title="18811055601@163.com" class="mail">18811055601@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/RedWolfChao" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://blog.csdn.net/redwolfchao" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">��׿�ƶ�����(ɨä)</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">��׿�ƶ�����(ɨä)</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-01T03:11:11.000Z" itemprop="datePublished" class="page-time">
+  2017-05-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-安卓移动逆向(扫盲)"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">��׿�ƶ�����(ɨä)</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-01 11:11:11" datetime="2017-05-01T03:11:11.000Z"  itemprop="datePublished">2017-05-01</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>###Android ���� ###</p>
+<p><strong>ûɶ��˵��,��ɨһ��ä</strong></p>
+<hr>
+<p>###APK ���� ###</p>
+<p><strong>asset�ļ��У�</strong><br><strong>��ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����</strong><br><strong>res�ļ��� ����ԴĿ¼2��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>classes.dex  ��Java���������õ���Dalvik VM��ֱ��ִ�е��ļ��������н���</strong></p>
+<p><strong>resĿ¼�µ���Դ�ļ��ڱ���ʱ���Զ����������ļ���R.java������Java��������R.xxx.yyy�����ã�</strong><br><strong>��assetĿ¼�µ���Դ�ļ�����Ҫ������������Java��������Ҫ��AssetManager�����ʣ�</strong></p>
+<p><strong>һ����˵��������Ƶ����Ƶ��Դ����Ҫ����raw��asset�£���ʹ��Java������Android����ʹ�õ�����Դ�ļ���������res�£�ʹ��C++��Ϸ���棨��ʹ��Lua Unity3D�ȣ�����Դ�ļ�����Ҫ����asset�¡�</strong></p>
+<hr>
+<p>###Dalvik �ֽ��� ###</p>
+<p><strong>Dalvik�ֽ�����ʲô��</strong></p>
+<p>Dalvik�ֽ�����ѧϰ�ƽ��Ļ���������������Ҫ�˽�һ��</p>
+<p>Dalvik��googleר��ΪAndroid����ϵͳ���Ƶ�һ�����������������ȵ��Ż�����ȻAndroid�ϵĳ�����ʹ��java�������ģ�����Dalvik�ͱ�׼��java������JVM���������¡�Dalvik VM�ǻ��ڼĴ����ģ���JVM�ǻ���ջ�ģ�Dalvik��ר�����ļ�ִ�и�ʽdex��dalvik executable������JVM��ִ�е���java�ֽ��롣Dalvik VM��JVM�ٶȸ��죬ռ�ÿռ����١�</p>
+<p>ͨ��Dalvik���ֽ������ǲ���ֱ�ӿ���ԭ�����߼����룬��ʱ��Ҫ������Apktool��dex2jar+jd-gui�����������鿴�����ǣ�ע���������������޸�APK��Ҫ�������ļ���.smali�ļ��������ǵ�������Java�ļ����±��롣</p>
+<hr>
+<p>###Smali–�ƽ�������֮��###</p>
+<p><strong>ʲô��Smali��</strong></p>
+<p><strong>Smali��Baksmali�ֱ���ָ��׿ϵͳ����Java��������Dalvik����ʹ�õ�һ�֡�dex��ʽ�ļ��Ļ��������������������﷨��һ�ֿ���ʽ��Jasmin/dedexer�﷨��������ʵ����.dex��ʽ���й��ܣ�ע�⣬������Ϣ����·��Ϣ�ȣ�</strong></p>
+<p><strong>�����Ƕ�APK�ļ����з������󣬱������ɴ������ļ���С���ڴ˶�smali�ļ����м�Ҫ�Ľ��ܡ�������Davlik�ֽ����У��Ĵ�������32λ�ģ��ܹ�֧���κ����ͣ�64λ���ͣ�Long/Double����2���Ĵ�����ʾ��Dalvik�ֽ������������ͣ�ԭʼ���ͣ��������ͣ��������������飩</strong></p>
+<p><strong><em>ԭʼ����</em></strong></p>
+<p>B—byte<br>C—char<br>D—double<br>F—float<br>I—int<br>J—long<br>S—short<br>V—void<br>Z—boolean<br>[XXX—array<br>Lxxx/yyy—object</p>
+<p><strong>����������������������ı�ʾ��ʽ�ǣ��ڻ�������ǰ����ǰ�����š�[��������int������float�����ֱ���ʾΪ��[I��[F�������ı�ʾ����L��Ϊ��ͷ����ʽ��LpackageName/objectName;��ע�������и��ֺŸ������󣩣�����String������smali��Ϊ��Ljava/lang/String;������java/lang��Ӧjava.lang����String���Ƕ����ڸð��е�һ��������</strong></p>
+<p><strong>���������ʣ���Ȼ������LpackageName/objectName;����ʾ�������������ڲ�����������smali��������?�����ǣ�LpackageName/objectName$$subObjectName;��Ҳ�������ڲ���ǰ�ӡ�$�����ţ����ڡ�$�����Ÿ����Ĺ������ں���̸����</strong></p>
+<p><strong>�����Ķ���һ��Ϊ��     Func-Name (Para-Type1Para-Type2Para-Type3…)Return-Type     ע������������֮��û���κηָ�����ͬ���ټ������Ӿ����������ˣ�     1. hello ()V         û����������void hello()��     2. hello (III)Z         ��������boolean hello(int, int, int)��     3. hello (Z[I[ILjava/lang/String;J)Ljava/lang/String;         ����������String hello (boolean, int[], int[], String, long) ������</strong></p>
+<hr>
+<p><strong><em>Smali�����﷨</em></strong></p>
+<p>.field private isFlag:z������������<br>.method��������<br>.parameter������������<br>.prologue����������ʼ<br>.line 123�����˷���λ�ڵ�123��<br>invoke-super�������ø�����<br>const/high16  v0, 0x7fo3������0x7fo3��ֵ��v0<br>invoke-direct�������ú���<br>return-void������������void<br>.end method������������<br>new-instance��������ʵ��<br>iput-object����������ֵ<br>iget-object�������ö���<br>invoke-static�������þ�̬����</p>
+<p>������ת��֧��</p>
+<p>“if-eq vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-ne vA, vB, :cond_xx”   ����vA������vB����ת��:cond_xx<br>“if-lt vA, vB, :cond_xx”    ����vAС��vB����ת��:cond_xx<br>“if-ge vA, vB, :cond_xx”   ����vA���ڵ���vB����ת��:cond_xx<br>“if-gt vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-le vA, vB, :cond_xx”    ����vAС�ڵ���vB����ת��:cond_xx<br>“if-eqz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-nez vA, :cond_xx”   ����vA������0����ת��:cond_xx<br>“if-ltz vA, :cond_xx”    ����vAС��0����ת��:cond_xx<br>“if-gez vA, :cond_xx”   ����vA���ڵ���0����ת��:cond_xx<br>“if-gtz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-lez vA, :cond_xx”    ����vAС�ڵ���0����ת��:cond_xx</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-10T09:26:34.367Z" itemprop="dateUpdated">2017-05-10 17:26:34</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://joryhe.coding.me">
+            <img src="/img/my_icon.jpg" alt="RedWolfChao">
+            RedWolfChao
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&title=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&title=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/Lambda表达式.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Lambda表达式--Java 8 新特性</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/安卓移动逆向(二).html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">��׿�ƶ�����(��)</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="安卓移动逆向(扫盲)" data-title="��׿�ƶ�����(ɨä)" data-url="http://joryhe.coding.me/post/安卓移动逆向(扫盲).html"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>RedWolfChao &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&title=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&title=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(ɨä)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/安卓移动逆向(扫盲).html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACH0lEQVR42u3aQW7EIAwF0Ln/pdNtpXbot52pFHisKpRJeCxcjP16xeP6Nn7OJ0+u37yeuW1gYGA8lnEtx7tn1p9cz6/x6+++3SYMDIwDGOul9D6cB9YbtgkDAwMjYCSYJARjYGBgzBlXMPJf5SQMDAyM3oLyq7f8Wu3juTgGBsYDGdXr+//8+yP1DQwMjEcxruKoHuCShLZ66PxlVRgYGFsz8gBXJeXFyF7AxcDAOJORp4vVloikeJm8GQMDA6N6Qd9rlYgW1CttYmBgbMrolQQmaWq1bJCkxxgYGCcwqslqr9miF8qjEgUGBsYBjPxSLA+1veuzZosGBgbGAYzqMa6XuFbnC8EXAwNja8ZtIa9YbuwtPfpngIGBsR2jutBqifEu2B+hFgMDY2tGb9HV410vfS1nqRgYGFszqo0RhSAYLHReQMXAwDiHkR/+5qXNqDA52DgMDIy9GZ8Ir8nFWf6GZFMwMDD2Y1SXmy80ObklqXL0XQwMjAMYveatCXg+E1U5MDAwNmJUg2M1UPYaOPJ2NAwMjHMYeWI5P9jN28tGtVAMDIyHMHrX+r0ktteCnxQkMDAw9mbMg93kkFdNU5uNFxgYGFsweglqEi6rx8pqwMXAwDiN0WubmBQ+e++PcnEMDIzjGfOkN7nobyaoGBgYGMXQOU99k03EwMA4h5EEzV7r2KSZtfAkBgbG1ozquSvH3HXRNk99MTAwHsv4Au+u5PPU3QIlAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '...';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

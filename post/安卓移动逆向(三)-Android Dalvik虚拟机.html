@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>��׿�ƶ�����(��)-Android Dalvik������ | RedWolfChao Blog | 沉默是金</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Android����">
+    <meta name="description" content="���Ҷ�֪��Java������������Java��������,Android������?��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual M">
+<meta name="keywords" content="Android����">
+<meta property="og:type" content="article">
+<meta property="og:title" content="��׿�ƶ�����(��)-Android Dalvik������">
+<meta property="og:url" content="http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html">
+<meta property="og:site_name" content="RedWolfChao Blog">
+<meta property="og:description" content="���Ҷ�֪��Java������������Java��������,Android������?��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual M">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413152723245?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413155625862?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413171403627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413172400594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413172418327?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413174546498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413185529172?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170413185946687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-05-10T09:27:37.239Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="��׿�ƶ�����(��)-Android Dalvik������">
+<meta name="twitter:description" content="���Ҷ�֪��Java������������Java��������,Android������?��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual M">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+    
+        <link rel="alternate" type="application/atom+xml" title="RedWolfChao Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/my_icon.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">RedWolfChao</h5>
+          <a href="mailto:18811055601@163.com" title="18811055601@163.com" class="mail">18811055601@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/RedWolfChao" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://blog.csdn.net/redwolfchao" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">��׿�ƶ�����(��)-Android Dalvik������</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">��׿�ƶ�����(��)-Android Dalvik������</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-05-03T05:13:13.000Z" itemprop="datePublished" class="page-time">
+  2017-05-03
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-安卓移动逆向(三)-Android Dalvik虚拟机"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">��׿�ƶ�����(��)-Android Dalvik������</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-05-03 13:13:13" datetime="2017-05-03T05:13:13.000Z"  itemprop="datePublished">2017-05-03</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><strong>���Ҷ�֪��Java������������Java��������,Android������?</strong><br><strong>��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual Machine,Ҳ����Dalvik��������</strong></p>
+<p><strong>��ƪ����:</strong></p>
+<ul>
+<li>ɨäDalvik������</li>
+<li><strong>�˽�Smail���﷨,�ܶ���Smail�ļ�</strong></li>
+</ul>
+<p>###Dalvik����###</p>
+<p>####Dalvik���ص�(������JVM)####</p>
+<ul>
+<li>����С,ռ���ڴ�С;</li>
+<li>ר�е�DEX��ִ���ļ���ʽ,������С,ִ���ٶȸ���;</li>
+<li>�����ز���32λ����ֵ,Ѱַ�෽����,�ֶ���,��������;</li>
+<li>���ڼĴ����ܹ�,��ӵ��һ�����ɵ�ָ��ϵͳ</li>
+<li>�ṩ�˶����������ڹ���,��ջ����,�̹߳���,��ȫ���쳣�����Լ��������յ���Ҫ����;</li>
+<li>���е�Android������������Androidϵͳ������,ÿ�����̶�Ӧ��һ��Dalvik������ʵ��;</li>
+</ul>
+<hr>
+<p>####Dalvik��������Java������������####</p>
+<ol>
+<li>Java���������е�Java�ֽ���,Dalvik���������е���Dalvik�ֽ���</li>
+<li><p><strong>Dalvik��ִ���ļ���������С</strong><br>��������:<br>SDK����һ������dx�Ĺ��߸�����Java�ֽ���ת��ΪDalvik�ֽ���.dx���߶�Java���ļ���������,���������ļ��г��ֵ�����������Ϣ,�����������ڳ�ʼ��ʱ�����ظ����ļ���������������.</p>
+<p>�ٸ�����:<br>��Java���д������ַ��������ڶ������ļ��б��ظ�ʹ��,��Щ������Ϣ��ֱ�������ļ�������,ͬ��Ҳ������Ӱ�������������ļ���Ч��.dx��������������������ר�ŵĴ���,��������Java���ļ��еĳ����ؽ��зֽ�,�������е�������Ϣ,�������ϳ�һ��������,���е����ļ�����ͬһ��������.dx����ת��������ͼ��ʾ,����dx���߶Գ����ص�ѹ��,�ǵ���ͬ���ַ���,������DEX�ļ���ֻ����һ��,�Ӷ���С���ļ�������.</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="dx����ת������" title="">
+                </div>
+                <div class="image-caption">dx����ת������</div>
+            </figure>
+<ol>
+<li><p><strong>Java��������Dalvik�������ܹ���ͬ</strong></p>
+<p>����˵һ��:Java����������ջ�ܹ�,Dalvik���ڼĴ����ܹ�;</p>
+</li>
+</ol>
+<hr>
+<p>###Dalvikָ����ʽ###</p>
+<p><strong>һ��Dalvik����������һϵ�е�Dalvikָ������,ָ���﷨��ָ����λ������ָ����ʽ��ʶ������.λ����Լ������</strong></p>
+<ul>
+<li>ÿ16λ���ֲ��ÿո��ָ��;</li>
+<li>ÿ����ĸ��ʾ��λ,ÿ����ĸ��˳���Ӹ��ֽڿ�ʼ,���е����ֽ�.ÿ��λ֮��<strong>����</strong>������”|”����ʾ��ͬ������;</li>
+<li>˳������A-Z�ķ�����д��ĸ��Ϊһ��4λ�Ĳ�����,op��ʾһ��8λ�Ĳ�����;</li>
+<li>“?”����ʾ�����ֶε�����λΪ0ֵ;</li>
+</ul>
+<p><strong>����</strong><br>  “A|B|op BBBB F|E|D|C”<br>  ָ���м��������ո�,ÿ���ֿ��Ĳ�����16λ,����3��16λ��������ָ��;<br>  ��һ��16λ��”A|B|op” ��8λ��A��B����,���ֽ��ɲ�����op����;<br>  �ڶ���16λ��BBBB����,����ʾһ��16λ��ƫ��ֵ;<br>  ������16λ�ֱ���F,E,D,C���ĸ��ֽ�����,���������Ǳ�ʾ�Ĵ����Ĳ���.</p>
+<p><strong>����ʹ��λ��ʶ���޷�ȷ��һ��ָ������˼,����ͨ��ָ����ʽ��ʶ��ָ��ָ���ĸ�ʽ����,Լ������</strong></p>
+<ul>
+<li>ָ����ʽ��ʶ�����������ַ�����,ǰ����������,����һ������ĸ;</li>
+<li>��һ������ʽ��ʶָ���ɶ��ٸ�16λ��������;</li>
+<li>�ڶ������ֱ�ʶָ������ʹ�üĴ����ĸ���,��������”r”��ʶʹ��һ����Χ�ڵļĴ���;</li>
+<li>��������ĸΪ������,��ʶָ���õ��Ķ������ݵ�����,����ͼ:</li>
+<li><p>����һ������������ ��ĩβ���ܻ���������һ����ĸ,������”s”��ʾָ�����þ�̬����,������”i”��ʾָ��Ӧ�ñ���������.</p>
+<p><img src="http://img.blog.csdn.net/20170413152723245?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="ָ����ʽ��ʶ��������"></p>
+</li>
+</ul>
+<p><strong>����</strong></p>
+<p>“22x” ��������Ϣ���Զ���</p>
+<ol>
+<li>ָ����2��16λ������</li>
+<li>ָ��ʹ��2���Ĵ���</li>
+<li>û��ʹ�õ�����������</li>
+</ol>
+<p><strong>����,Dalvikָ�����﷨����һЩ˵��,Լ������</strong></p>
+<ul>
+<li>ÿ��ָ���Ӳ����뿪ʼ,������������,������������,ÿ������֮�����ö��ŷֿ�;</li>
+<li>ÿ��ָ���Ĳ�����ָ���ĵ�һ���ֿ�ʼ,opλ�ڵ�8λ,��8λ������һ��8λ�Ĳ���Ҳ����������4λ�Ĳ���,������Ϊ��.����ָ���16λ,�������Ĳ���������Ϊ����;</li>
+<li>��������ʹ��”vX”�ķ�ʽ��ʶ,��������һ���Ĵ���,��v0,v1��;</li>
+<li>������������”#+X”�ķ�ʽ,��������һ����������;</li>
+<li>������������”+X”�ķ�ʽ,��������һ������ָ���ĵ�ַƫ��;</li>
+<li>������������”kind@X”�ķ�ʽ,��������һ������������ֵ.����kind��ʾ����������,����string@BBBB,��ʾ�ľ����ַ�������������BBBB;</li>
+</ul>
+<p><strong>����</strong><br>“op vAA string@BBBB”<br>��8λΪ��,�õ�1���Ĵ�������vAA,���õ�һ���ַ�������������BBBB;</p>
+<hr>
+<p>###Dalvik�Ĵ���###</p>
+<p><strong>ɨä������,��ʼ�ص���</strong></p>
+<p>####Dalvik�ֽ���������,����,���ֶα�ʾ����####</p>
+<ol>
+<li><strong>����</strong><br>Dalvik�ֽ���ֻ����������,����������,������˵,��ͼ;<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413155625862?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                </div>
+                <div class="image-caption">����</div>
+            </figure>
+ÿ��Dalvik�Ĵ�������32λ��С,����С�����ߵ���32λ���ȵ�������˵,һ���Ĵ����Ϳ��Դ��Ÿ����͵�ֵ,����J(long),D(double)��64λ������,���ǵ�ֵ��ʹ�����������Ĵ������洢��,v0��v1����vN��vN+1��;<br>L�ͺ�������,��ʾ�κ�һ��Java��,��Dalvik����������,������” Lpackage/name/ObjectName; “��ʾ,ע������һ���ֺ�,����” Ljava/lang/String;”�൱��String;<br>[���;������е�����,[���������������͵�������,��[I��ʾһ������һά����,-&gt;int[],[[I��ʾint[][]&lt;—&gt; [Ljava/lang/String; ��ʾ�������� String [];</li>
+<li><strong>����</strong><br>Dalvikʹ�÷�����,���Ͳ����뷵��ֵ������һ������;<br>��ʽ����:<br>Lpackage/name/ObjectName;-&gt;MethodName(III)Z<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>MethodName������<br>(III)����,����int����<br>Z����ֵvoid<br><strong>����</strong><br>method(I[[IILjava/lang/String;[Ljava/lang/String;)Ljava/lang/String;<br>�ȿ�,����������֪ʶ,����ת��ΪJava��ʽ�Ĵ���Ϊ:<br>String method(int ,int[][],String,String[])</li>
+<li><strong>�ֶ�</strong><br>�ֶκͷ���������,����û�в����ͷ���ֵ,ȡ����֮�����ֶε�����,��ʽ����<br>Lpackage/name/ObjectName;-&gt;FieldName:TYPE<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>FieldName�ֶ���<br>TYPE�ֶ�����<br>FieldName��TYPE��ð�Ÿ���<br><strong>����</strong><br>name:Ljava/lang/String;<br>ת��:<br>String name;<br><strong>Dalvik�����е��ֶδ�����.fieldָ�ͷ,�����ֶ����Ͳ�ͬ,���ֶ�ָ���Ŀ�ʼ,���ܻ��õ�����”#”����ע��</strong>;</li>
+</ol>
+<hr>
+<p>###Dalvikָ�###</p>
+<p>####ָ���ص�####</p>
+<p>Dalvikָ���ڵ��ø�ʽ��ģ����C���Եĵ���Լ��.Dalvikָ���﷨�����ʷ��������ص�:</p>
+<ul>
+<li>�������ô�Ŀ��(destination)��Դ(source)�ķ�ʽ;</li>
+<li>�����ֽ����Ĳ�����ѡ���Ĳ�ͬ,һЩ�ֽ����������ֽ�����׺��������,��Щ��׺ͨ�����ֽ��������ƺ�����б��”/“���ָ���;</li>
+<li>��ָ���������,����ֵ�е�ÿ����ĸ��ʾ����Ϊ4λ;</li>
+<li>�����ֽ����Ĵ�С�����͵Ĳ�ͬ,һЩ�ֽ������������ƺ�׺����������:<ul>
+<li>32λ�������͵��ֽ���,δ�����κκ�׺;</li>
+<li>64λ�������͵��ֽ�����-wide��׺;</li>
+<li>�������͵��ֽ������ݾ����������Ӻ�׺,���ǿ�����-boolean,-byte,-char,-short,-int,-long,-float,-double,-object,-string,-class,-void֮һ;</li>
+</ul>
+</li>
+</ul>
+<p><strong>����</strong><br>“move-wide/from16 vAA,vBBBB”</p>
+<p>moveΪ�����ֽ���.��ʶ���ǻ�������;<br>wideΪ���ƺ�׺.��ʶָ�����������ݿ���(64λ);<br>from16λ�ֽ�����׺.��ʶԴΪһ��16λ�ļĴ������ñ���;<br>vAAΪĿ�ļĴ���,��ʼ����Դ��ǰ�� ȡֵ��ΧΪv0-v2^8-1(255);<br>vBBBBΪԴ�Ĵ���,ȡֵ��ΧΪv0-v2^16-1(65535)</p>
+<p><strong>�ղ���ָ��</strong></p>
+<p>�ղ���ָ�������Ƿ�Ϊnop,����ֵ��00,ͨ��nopָ��ù�����������;,ûɶ����;</p>
+<p><strong>���ݲ���ָ��</strong></p>
+<p>���ݲ���ָ��Ϊ<strong>move</strong>.moveָ����ԭ��Ϊmove destination,source����move destination,moveָ�������ֽ����Ĵ�С�����Ͳ�ͬ,���������ϲ�ͬ�ĺ�׺.<br><strong>����(��ʾ̫��ֱ����ͼ,�����)</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413171403627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="���ݲ���ָ��" title="">
+                </div>
+                <div class="image-caption">���ݲ���ָ��</div>
+            </figure>
+<p><strong>����ָ��</strong></p>
+<p>����ָ��ָ���Ǻ�����βʱ���е�����һ��ָ��.���Ļ����ֽ���λ<strong>return</strong>,����������������ָ��<br><strong>����</strong></p>
+<ol>
+<li>“return-void” ����һ��void</li>
+<li>“return vAA” ����һ��32λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+<li>“return-wide vAA” ����һ��64λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+<li>“return-object vAA” ����һ���������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+</ol>
+<p><strong>���ݶ���ָ��</strong></p>
+<p>���ݶ���ָ�����������������õ��ı���,�ַ���,��������,���Ļ����ֽ���Ϊ<strong>const</strong><br><strong>����(��ʾ̫��ֱ����ͼ-_-)</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413172400594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413172418327?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure></p>
+<p><strong>��ָ��</strong></p>
+<p>��ָ�������ڶ��̳߳����ж�ͬһ�����Ĳ���,Dalvikָ�����������ָ��.</p>
+<ol>
+<li>“monitor-enter vAA” Ϊָ���Ķ�����ȡ��</li>
+<li>“monitor-exit vAA”Ϊָ���Ķ����ͷ���</li>
+</ol>
+<p><strong>ʵ������ָ��</strong></p>
+<p>��ʵ�����صĲ�������ʵ�������ʹ���,���鼰�½���;</p>
+<ul>
+<li>“check-case vAA,type@BBBB” ��vAA�еĶ�������ǿתΪBBBB����;</li>
+</ul>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><div class="line">(<span class="name">BBBB</span>)vAA<span class="comment">;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>“instance-of vA,vB,type@CCCC” �ж�vB�еĶ��������Ƿ���ת��CCCC����,��vA=1,����vA=0;</li>
+</ul>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(vB.<span class="keyword">instanceof</span>(type<span class="meta">@CCCC</span>))&#123;</div><div class="line">	vA =<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	vA = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>“new-instance vAA,type@BBBB” �½�һ��BBBB�Ķ���vAA,BBBB����Ϊ����</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">BBBB vAA</span> = new BBBB();</div></pre></td></tr></table></figure>
+<ul>
+<li>“check-cast/jumbo vAAAA,type@BBBBBBBB” ��”check-case vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+<li>“instance-of/jumbo vAAAA,vBBBB,type@CCCCCCCC”��”instance-of vAA,vBB,type@CCCC”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+<li>“new-instance/jumbo vAAAA,type@BBBBBBBB”��”new-instance vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+</ul>
+<p><strong>��������ָ��</strong></p>
+<p>��������������ȡ���鳤��(ָ������������Ŀ����),�½�����,���鸳ֵ,����Ԫ��ȡֵ�븳ֵ�Ȳ���;</p>
+<ul>
+<li>“array-length vA,vB” </li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = vB.length<span class="comment">; //	��vB�ĳ��ȸ�ֵ��vA</span></div></pre></td></tr></table></figure>
+<ul>
+<li>“new-array vA,vB,type@CCCC”</li>
+</ul>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = CCCC[vB]<span class="comment">; //	����һ��vB����CCCC���͵����鸳ֵ��vA</span></div></pre></td></tr></table></figure>
+<ul>
+<li>�����ĸ�ͼ<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413174546498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+</li>
+</ul>
+<p><strong>�쳣ָ��</strong></p>
+<p>Dalvik ָ�����һ��ָ�������׳��쳣</p>
+<ul>
+<li>“throw vAA” �׳�vAA�Ĵ�����ָ�����͵��쳣</li>
+</ul>
+<p><strong>��תָ��</strong></p>
+<p>Dalvikָ�����������תָ��:��������ת(goto),��֧��ת(switch),������ת(if)</p>
+<ul>
+<li>“goto +AA” ��������ת��ָ��ƫ�ƴ�,ƫ����AA����Ϊ0;</li>
+<li>“goto/16+AAAA” ��������ת��ָ��ƫ�ƴ�,ƫ����AAAA����Ϊ0;</li>
+<li>“goto/32+AAAAAAAA” ��������ת��ָ��ƫ�ƴ�;</li>
+<li>“packed-switch vAA,+BBBBBBBB” ��֧��תָ��. vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��packed-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ�ǹ��ɵ�����.(����ô��ס�ͺ�,����Ȥ�����Ұٶ�..)</li>
+<li>“sparse-switch vAA,+BBBBBBBB”��֧��תָ��,vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��sparse-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ���޹��ɵ�ƫ����.</li>
+<li>“if-test vA,vB,+CCCC” ������תָ��,�Ƚ�vA��vB��ֵ,�����ȽϽ�����������ת��CCCCָ����ƫ�ƴ�,ƫ����CCCC����Ϊ0,if-test���͵�ָ�������¼���:<ul>
+<li>��if-eq vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
+<li>��if-ne vA, vB, :cond_xx�� ����vA������vB����ת��:cond_xx </li>
+<li>��if-lt vA, vB, :cond_xx�� ����vAС��vB����ת��:cond_xx </li>
+<li>��if-ge vA, vB, :cond_xx�� ����vA���ڵ���vB����ת��:cond_xx </li>
+<li>��if-gt vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
+<li>��if-le vA, vB, :cond_xx�� ����vAС�ڵ���vB����ת��:cond_xx </li>
+</ul>
+</li>
+<li>“if-testz vAA,+BBBB”������תָ��,��vAA��0���Ƚ�,�����������߲�������������ת��BBBB��ָ��ƫ�ƴ�BBBB����Ϊ0, if-testz���͵�ָ�������¼���:<ul>
+<li>��if-eqz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
+<li>��if-nez vA, :cond_xx�� ����vA������0����ת��:cond_xx </li>
+<li>��if-ltz vA, :cond_xx�� ����vAС��0����ת��:cond_xx </li>
+<li>��if-gez vA, :cond_xx�� ����vA���ڵ���0����ת��:cond_xx </li>
+<li>��if-gtz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
+<li>��if-lez vA, :cond_xx�� ����vAС�ڵ���0����ת��:cond_xx</li>
+</ul>
+</li>
+</ul>
+<p><strong>�Ƚ�ָ��</strong></p>
+<p>�Ƚ�ָ�����ڶ������Ĵ�����ֵ(�����ͻ��߳�����)���бȽϸ�ʽΪ:<br>“cmpkind vAA,vBB,vCC” </p>
+<p>Dalvikָ��й���5���Ƚ�ָ��:</p>
+<ul>
+<li><p>“cmpl-float” �Ƚ�����floatֵ;</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>“cmpg-float” �Ƚ�����float��ֵ</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>��cmpg����cmpʱ,B &gt; CʱA = 1,��֮-1;��cmplʱ,B &gt; CʱA = -1��֮1;</strong></p>
+<ul>
+<li>“cmpg-double” �Ƚ�����double��ֵ</li>
+<li>“cmpl-double” �Ƚ�����double��ֵ</li>
+<li>“cmp-long” �Ƚ�����long��ֵ</li>
+</ul>
+<p><strong>�ֶβ���ָ��</strong></p>
+<p>�ֶβ���ָ�������Զ���ʵ�����ֶν��ж�д����.<br>�ֶε����Ϳ�����Java����Ч����������,����ͨ�ֶ��뾲̬�ֶβ���������ָ�,�ֱ���”iinstanceop vA,vB,field@CCCC”��”sstaticop vAA,field@BBBB”.<br>��Android 4.0ϵͳ��,��”iinstanceop /jumbovAAAA,vBBBB,field@CCCCCCCC”��”sstaticop/jumbo vAAAA,field@BBBBBBBB”.������������������ͬ,ֻ�Ǽ���jmpbo��׺,�Ĵ�����ָ������ȡֵ��Χ����(������ֻ��˵��/jumboָ����׺��ָ�,���þͲ�ָ����)<br>��ͨ�ֶ�ָ����ָ��ǰ׺Ϊi,��.����ͨ�ֶζ�����ʹ��igetָ��,д����ʹ��iputָ��;��̬�ֶε�ָ��ǰ׺Ϊs,��.�Ծ�̬�ֶεĶ�����Ϊsget,д����Ϊsput;<br>���ݷ��ʵ��ֶ����Ͳ�ͬ,�ֶβ���ָ�������������ֶ����͵ĺ�׺,��iget-byteָ����ʾ��ȡʵ���ֶε�ֵ����Ϊbyte;</p>
+<p><strong>��������ָ��</strong><br>��������ָ���������ʵ���ķ���,���Ļ���ָ��Ϊinvoke,��������ָ����”invoke-kind{vC,vD,vE,vF,vG},meth@BBBB”��”invoke-kind/range{vCCCC…VNNNN},meth@BBBB”����,������ָ������ûɶ��ͬ,���������ò����Ĵ���ʱʹ����range��ָ���Ĵ����ķ�Χ,���ݷ������͵Ĳ�ͬ,��������5����������ָ��:</p>
+<ol>
+<li>“invoke-virtual” ����ʵ�����鷽��</li>
+<li>“invoke-super” ����ʵ���ĸ��෽��</li>
+<li>“invoke-direct” ����ʵ����ֱ�ӷ���</li>
+<li>“invoke-static” ����ʵ���ľ�̬����</li>
+<li>“invoke-interface” ����ʵ���Ľӿڷ���<br>Android 4.0��jumbo��ָ�;</li>
+</ol>
+<p>��������ָ���ķ���ֵ����ʹ��move-result*ָ������ȡ:<br>invoke-static{},Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;<br>move-result-object v0;</p>
+<p><strong>����ת��ָ��</strong><br>����ת��ָ�����ڽ�һ�����͵���ֵת��Ϊ��һ������,���ĸ�ʽΪ”unop vA,vB” ��vB�е�������һ������(ת��)����vA��:(�Ƚϼ���,ֱ����ͼ)</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413185529172?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+<p><strong>��������ָ��</strong></p>
+<p>��������ָ��������������ָ�����߼�����ָ��:</p>
+<ul>
+<li>��������ָ��:��,��,��,��,ģ,��λ��</li>
+<li>�߼�����ָ��:����,��,��,�ֻ���;<br>�ϸ�ͼ��<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170413185946687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                </div>
+                <div class="image-caption">����дͼƬ����</div>
+            </figure>
+���л����ֽ���������-type������-int,-long,-float,-double,����3��ָ��Ҳ���,�Ͳ�����,������ͨ;</li>
+</ul>
+<p><strong>=<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= </strong></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-10T09:27:37.239Z" itemprop="dateUpdated">2017-05-10 17:27:37</time>
+</span><br>
+
+
+        
+    </div>
+    <footer>
+        <a href="http://joryhe.coding.me">
+            <img src="/img/my_icon.jpg" alt="RedWolfChao">
+            RedWolfChao
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&title=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&title=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/安卓移动逆向(二).html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">��׿�ƶ�����(��)</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/安卓移动逆向(四)-Smail_HelloWorld.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">��׿�ƶ�����(��)-Smail_HelloWorld</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="安卓移动逆向(三)-Android Dalvik虚拟机" data-title="��׿�ƶ�����(��)-Android Dalvik������" data-url="http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>RedWolfChao &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&title=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&title=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(��)-Android Dalvik������》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html&via=http://joryhe.coding.me" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aS47jMAwFwL7/pWeA2Q7aeY+UjCzKqyAfm6WFxJD8+YmvP/+u5J3/r+e7Pb/+7dPDFx4eHt4o9Ofgnh88W5Tnhchj+LCgeHh4eNd4yfa9Zyek51/lMePh4eF9Ay9PbZ+/n/OSZcXDw8P7Zl4edB7WLEHHw8PD+wZeEtbs09lhM3siHh4e3ju8tgH2Da8v9vfw8PDwFl31dsOdtbvad4po8fDw8C7w8oGqvJ2/H+Q6PJKFh4eHd4HXZqRtEbZtgM0KEDUVDw8Pb8Rri6rtEswKrLO0/td/DHh4eHhHeXmZIB+Taj9dnV1JnHh4eHhHeaeKC20WPzsq8oGww7UTPDw8vDIlzcsQ7TejhPjQIYSHh4d3ijcbEXjeoNuFS36bfwcPDw/vTV5+03xR8sJuW7qNiiZ4eHh4r/D2IwJJqXdTui0WFA8PD+8a71ThoB1E2Jc5opQaDw8P7yiv3Y7bMkGdBMe84lDBw8PDu8A7kLzGpdt8ZGF/fzw8PLwbvNydjz21peF8VKseIMDDw8O7zGsLuMn7eQMsb4Mly4SHh4d3m3eqkDrL3NsjJE+s8fDw8G7wZlv5ptnfpuxtAffD8YCHh4e35u039Dxp3qfveWvt2HmFh4eHV/JmW/mpsm++rKt/DHh4eHgj3iy4fLtvkbOoPowO4OHh4R3iJY/JxwI2oRTbfXwU4eHh4d3gtY35fItvU/NZgfhDbHh4eHiXefkG3Tal6mZ/8JSotIGHh4d3gZdfySGRL0db4Mj/H+Dh4eG9w2vLqe3Gnf9qdqh8OBjw8PDwrvHaZlUebltEaEsSxQABHh4e3uu8tmW1Sb5n7bRoFfHw8PBe520Gqmbb/eZZeHh4ePd4sy07v8OshDG7Mx4eHt5t3mawqS3X5kWHVbjthYeHh5defwEggkrf0r97ZwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '...';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
