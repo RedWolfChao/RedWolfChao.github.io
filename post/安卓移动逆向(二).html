@@ -13,20 +13,20 @@
     
     
     
-    <title>��׿�ƶ�����(��) | RedWolfChao Blog | 沉默是金</title>
+    <title>安卓移动逆向(二) | RedWolfChao Blog | 沉默是金</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="Android����">
-    <meta name="description" content="###Сʵ��–�ƽ�һ��С����### �����ƽ� �ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,">
-<meta name="keywords" content="Android����">
+    <meta name="keywords" content="Android逆向">
+    <meta name="description" content="###小实践–破解一个小程序### 如何破解 破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解. 需要工具  编译工具 : ApkTool 签名工具: SignApk : 链">
+<meta name="keywords" content="Android逆向">
 <meta property="og:type" content="article">
-<meta property="og:title" content="��׿�ƶ�����(��)">
+<meta property="og:title" content="安卓移动逆向(二)">
 <meta property="og:url" content="http://joryhe.coding.me/post/安卓移动逆向(二).html">
 <meta property="og:site_name" content="RedWolfChao Blog">
-<meta property="og:description" content="###Сʵ��–�ƽ�һ��С����### �����ƽ� �ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,">
+<meta property="og:description" content="###小实践–破解一个小程序### 如何破解 破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解. 需要工具  编译工具 : ApkTool 签名工具: SignApk : 链">
 <meta property="og:image" content="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170407190631738?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
@@ -37,10 +37,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-05-10T09:26:03.446Z">
+<meta property="og:updated_time" content="2017-05-10T09:36:57.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="��׿�ƶ�����(��)">
-<meta name="twitter:description" content="###Сʵ��–�ƽ�һ��С����### �����ƽ� �ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,">
+<meta name="twitter:title" content="安卓移动逆向(二)">
+<meta name="twitter:description" content="###小实践–破解一个小程序### 如何破解 破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解. 需要工具  编译工具 : ApkTool 签名工具: SignApk : 链">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
     
         <link rel="alternate" type="application/atom+xml" title="RedWolfChao Blog" href="/atom.xml">
@@ -125,13 +125,13 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">��׿�ƶ�����(��)</div>
+        <div class="flex-col header-title ellipsis">安卓移动逆向(二)</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -147,7 +147,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">��׿�ƶ�����(��)</h1>
+        <h1 class="title">安卓移动逆向(二)</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-05-02T04:12:12.000Z" itemprop="datePublished" class="page-time">
@@ -171,7 +171,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">��׿�ƶ�����(��)</h1>
+        <h1 class="post-card-title">安卓移动逆向(二)</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-05-02 12:12:12" datetime="2017-05-02T04:12:12.000Z"  itemprop="datePublished">2017-05-02</time>
 
@@ -188,41 +188,41 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>###Сʵ��–�ƽ�һ��С����###</p>
-<p><strong>�����ƽ�</strong></p>
-<p>�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,�������в���,����ѭ��,ֱ�����򱻳ɹ��ƽ�.</p>
-<p><strong>��Ҫ����</strong></p>
-<p> <a href="http://download.csdn.net/detail/redwolfchao/9807486" target="_blank" rel="external">���빤�� : ApkTool</a></p>
-<p>ǩ������: SignApk : ���ӣ�<a href="http://pan.baidu.com/s/1miwl6lU" target="_blank" rel="external">http://pan.baidu.com/s/1miwl6lU</a> ���룺ze44</p>
-<p>������֮�� ��ѹĿ¼��path�������� �㶮��</p>
+            <p>###小实践–破解一个小程序###</p>
+<p><strong>如何破解</strong></p>
+<p>破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解.</p>
+<p><strong>需要工具</strong></p>
+<p> <a href="http://download.csdn.net/detail/redwolfchao/9807486" target="_blank" rel="external">编译工具 : ApkTool</a></p>
+<p>签名工具: SignApk : 链接：<a href="http://pan.baidu.com/s/1miwl6lU" target="_blank" rel="external">http://pan.baidu.com/s/1miwl6lU</a> 密码：ze44</p>
+<p>下载完之后 解压目录到path环境变量 你懂得</p>
 <hr>
-<p><strong>׼��</strong></p>
-<p>�����Ƚ���һ���Լ���App,����������(PS:��Ը���Լ�����Դ������)</p>
-<p><a href="http://download.csdn.net/detail/redwolfchao/9807302" target="_blank" rel="external">���ƽ�����</a></p>
-<p>���ܾ��Ǹ����������û�������ע����,�ж�������ע������ϵͳ�㷨���ɵ�ע�����Ƿ�һ��,һ����ע���ɹ�,��������,�����򲻿���;</p>
+<p><strong>准备</strong></p>
+<p>我们先建立一个自己的App,长得像这样(PS:不愿意自己建有源码下载)</p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9807302" target="_blank" rel="external">待破解代码</a></p>
+<p>功能就是根据输入的用户名生成注册码,判断输入的注册码和系统算法生成的注册码是否一致,一致则注册成功,软件可用,否则则不可用;</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                    <img src="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="软件" title="">
                 </div>
-                <div class="image-caption">����</div>
+                <div class="image-caption">软件</div>
             </figure>
-<p><strong>�������Ĵ���</strong></p>
+<p><strong>软件核心代码</strong></p>
 <figure class="highlight pony"><table><tr><td class="code"><pre><div class="line">findViewById(<span class="type">R</span>.id.act_main_btn).setOnClickListener(<span class="function"><span class="keyword">new</span> <span class="title">View</span>.<span class="title">OnClickListener</span>() &#123;</span></div><div class="line">    @<span class="title">Override</span></div><div class="line">    <span class="title">public</span> <span class="title">void</span> <span class="title">onClick</span>(<span class="type">View</span> v) &#123;</div><div class="line">        <span class="title">String</span> <span class="title">userName</span> = <span class="title">etUser</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">String</span> <span class="title">sn</span> = <span class="title">etSN</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">if</span> (checkSN(userName, sn)) &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_register, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">            <span class="title">tvTitle</span>.<span class="title">setText</span>(<span class="type">R</span>.string.string_success_register);</div><div class="line">        &#125; <span class="title">else</span> &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_unregister, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>��ʼ�ƽ�</strong></p>
-<p>����������Ҫ��apktool d appname.apk  ���з�����  ��ͼ</p>
+<p><strong>开始破解</strong></p>
+<p>首先我们需要用apktool d appname.apk  进行反编译  如图</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="������" title="">
+                    <img src="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="反编译" title="">
                 </div>
-                <div class="image-caption">������</div>
+                <div class="image-caption">反编译</div>
             </figure>
-<p>Ȼ��������һ��appName���ļ��� �������� ��Щsmali���ļ���</p>
-<p>֮�����ǵ�Ŀ�� ���ҵ�ͻ�ƿ�,ʲô��ͻ�ƿ�? </p>
-<p><strong><em>����Button֮������ʾ���־���ͻ�ƿ�</em></strong></p>
-<p>���ǽ���values�е�string.xml���ҿ�</p>
+<p>然后生成了一个appName的文件夹 里面就是 那些smali等文件了</p>
+<p>之后我们的目的 是找到突破口,什么是突破口? </p>
+<p><strong><em>点击Button之后的提示文字就是突破口</em></strong></p>
+<p>我们进入values中的string.xml找找看</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -230,66 +230,66 @@
                 </div>
                 <div class="image-caption">..</div>
             </figure>
-<p><strong>����Android����ʱ,String.xml�ļ��е������ַ�����Դ����”gen/<packagename>/R.java”�ļ���String���б���ʶ,ÿ���ַ�������Ψһ��int��������ֵ,ʹ��ApkTool������Apk�ļ���,���е�����ֵ������string.xml�ļ�ͬĿ¼�µ�public.xml��</packagename></strong></p>
-<p>����string_unregister��public.xml��</p>
+<p><strong>开发Android程序时,String.xml文件中的所有字符串资源都在”gen/<packagename>/R.java”文件的String类中被标识,每个字符串都有唯一的int类型索引值,使用ApkTool反编译Apk文件后,所有的索引值保存在string.xml文件同目录下的public.xml中</packagename></strong></p>
+<p>搜索string_unregister在public.xml中</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091202516?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091202516?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>���Ƿ���string_unregister����Ӧ��idΪ 0x7f060027 </p>
-<p><strong>����˵��Ҫȫ������smali�ļ����а���0x7f060027�ļ���λ��,����֪������MainActivity��������,ֱ�ӽ��뼴��(PS:����,�Ҳ�֪������ȫ�������ļ��ڵ�����)</strong></p>
-<p>���ǽ���MainActivity$1.smali����0x7f060027   ��ͼ</p>
+<p>我们发现string_unregister所对应的id为 0x7f060027 </p>
+<p><strong>书上说需要全局搜索smali文件夹中包含0x7f060027文件的位置,我们知道是在MainActivity中声明的,直接进入即可(PS:惭愧,我不知道如何全局搜索文件内的内容)</strong></p>
+<p>我们进入MainActivity$1.smali搜索0x7f060027   如图</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091511625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091511625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>��������</p>
+<p>解析如下</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091635813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091635813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>��ͼ�޸�֮��,���ǽ���app�ļ���,�ٴα�����������dist������һ��app,��������ǩ��(��ǩ�����޷����в��Ե�) ��ͼ</strong></p>
+<p><strong>按图修改之后,我们进入app文件夹,再次编译打包会在dist中生成一个app,我们现在签名(不签名是无法运行测试的) 如图</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091706813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091706813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>Ȼ�����ǽ���ǩ��,���������ص�signapk����,����-&gt;��ǩ����App  ��ͼ</strong><br><figure class="image-bubble">
+<p><strong>然后我们进行签名,用我们下载的signapk工具,生成-&gt;已签名的App  如图</strong><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure></p>
-<p><strong>����֮�� ���ǿ���ͨ��adb install signed.apk ��װ���ֻ����� Ҳ���Ը��Ƶ��ֻ���ֱ�Ӱ�װ,Ŷ,���ܻᱨ��</strong></p>
+<p><strong>生成之后 我们可以通过adb install signed.apk 安装到手机测试 也可以复制到手机上直接安装,哦,可能会报错</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>���ֻ��ϵ���ͬAppж���˼���</strong></p>
-<p><strong>��װ֮��,��������</strong></p>
+<p><strong>把手机上的相同App卸载了即可</strong></p>
+<p><strong>安装之后,就这样了</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>�ο��鼮: <a href="http://download.csdn.net/detail/redwolfchao/9807301" target="_blank" rel="external">Android������ȫ����������</a> </p>
+<p>参考书籍: <a href="http://download.csdn.net/detail/redwolfchao/9807301" target="_blank" rel="external">Android软件安全与逆向分析</a> </p>
 
         </div>
 
@@ -297,7 +297,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-05-10T09:26:03.446Z" itemprop="dateUpdated">2017-05-10 17:26:03</time>
+    Last updated: <time datetime="2017-05-10T09:36:57.451Z" itemprop="dateUpdated">2017-05-10 17:36:57</time>
 </span><br>
 
 
@@ -320,7 +320,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android逆向/">Android逆向</a></li></ul>
 
 
             
@@ -330,7 +330,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《��׿�ƶ�����(��)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《安卓移动逆向(二)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -340,7 +340,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《��׿�ƶ�����(��)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《安卓移动逆向(二)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -350,7 +350,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(��)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(二).html&via=http://joryhe.coding.me" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《安卓移动逆向(二)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(二).html&via=http://joryhe.coding.me" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -380,7 +380,7 @@
     <div class="waves-block waves-effect prev">
       <a href="/post/安卓移动逆向(扫盲).html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">��׿�ƶ�����(ɨä)</h4>
+        <h4 class="title">安卓移动逆向(扫盲)</h4>
       </a>
     </div>
   
@@ -389,7 +389,7 @@
     <div class="waves-block waves-effect next">
       <a href="/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">��׿�ƶ�����(��)-Android Dalvik������</h4>
+        <h4 class="title">安卓移动逆向(三)-Android Dalvik虚拟机</h4>
       </a>
     </div>
   
@@ -400,7 +400,7 @@
     
 
 <div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="安卓移动逆向(二)" data-title="��׿�ƶ�����(��)" data-url="http://joryhe.coding.me/post/安卓移动逆向(二).html"></div>
+    <div class="ds-thread" data-thread-key="安卓移动逆向(二)" data-title="安卓移动逆向(二)" data-url="http://joryhe.coding.me/post/安卓移动逆向(二).html"></div>
 </div>
 <script>
 lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
@@ -467,7 +467,7 @@ lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js'
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -487,7 +487,7 @@ lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js'
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《��׿�ƶ�����(��)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《安卓移动逆向(二)》 — RedWolfChao Blog&pic=http://joryhe.coding.me/img/my_icon.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -497,7 +497,7 @@ lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js'
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《��׿�ƶ�����(��)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://joryhe.coding.me/post/安卓移动逆向(二).html&title=《安卓移动逆向(二)》 — RedWolfChao Blog&source=学海无涯,回头是岸,阿弥陀佛" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -507,7 +507,7 @@ lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@latest/js/embed.min.js'
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《��׿�ƶ�����(��)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(二).html&via=http://joryhe.coding.me" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《安卓移动逆向(二)》 — RedWolfChao Blog&url=http://joryhe.coding.me/post/安卓移动逆向(二).html&via=http://joryhe.coding.me" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>

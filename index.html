@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -170,7 +170,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/安卓移动逆向(四)-Smail_HelloWorld.html">��׿�ƶ�����(��)-Smail_HelloWorld</a>
+      <a class="post-title-link" href="/post/安卓移动逆向(四)-Smail_HelloWorld.html">安卓移动逆向(四)-Smail_HelloWorld</a>
     </h3>
   
 
@@ -180,20 +180,20 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ###���ֱ�дһ��Smail���͵�HelloWord###
-��ʼ��д
-��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!!!
-.class public LHelloWorld;	#��������.sup...
+        ###着手编写一个Smail类型的HelloWord###
+开始编写
+不要直接复制,要一个一个字符敲,否则没有意义!!不要直接复制,要一个一个字符敲,否则没有意义!!!!不要直接复制,要一个一个字符敲,否则没有意义!!!!!!
+.class public LHelloWorld;	#定义类名.super Ljava/lang/Object;	#定义父类.method public stati...
     
 
         <a href="/post/安卓移动逆向(四)-Smail_HelloWorld.html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android逆向/">Android逆向</a></li></ul>
 
     </div>
     
@@ -220,7 +220,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/安卓移动逆向(三)-Android Dalvik虚拟机.html">��׿�ƶ�����(��)-Android Dalvik������</a>
+      <a class="post-title-link" href="/post/安卓移动逆向(三)-Android Dalvik虚拟机.html">安卓移动逆向(三)-Android Dalvik虚拟机</a>
     </h3>
   
 
@@ -230,17 +230,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ���Ҷ�֪��Java������������Java��������,Android������?��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtua...
+        大家都知道Java程序是运行在Java虚拟机上,Android程序呢?虽然Android平台使用Java语言来开发应用程序,但是Android程序却不是运行在标准的Java虚拟机上的. Google为Android平台专门设计了一套虚拟机来运行Android程序–Dalvik Virtual Machine,也就是Dalvik虚拟机了
+本篇作用:
+
+扫盲Dalvik虚拟机
+了解Smail的语...
     
 
         <a href="/post/安卓移动逆向(三)-Android Dalvik虚拟机.html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android逆向/">Android逆向</a></li></ul>
 
     </div>
     
@@ -267,7 +271,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/安卓移动逆向(二).html">��׿�ƶ�����(��)</a>
+      <a class="post-title-link" href="/post/安卓移动逆向(二).html">安卓移动逆向(二)</a>
     </h3>
   
 
@@ -277,19 +281,22 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ###Сʵ��–�ƽ�һ��С����###
-�����ƽ�
-�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ...
+        ###小实践–破解一个小程序###
+如何破解
+破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解.
+需要工具
+ 编译工具 : ApkTool
+签名工具: SignApk ...
     
 
         <a href="/post/安卓移动逆向(二).html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android逆向/">Android逆向</a></li></ul>
 
     </div>
     
@@ -316,7 +323,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/安卓移动逆向(扫盲).html">��׿�ƶ�����(ɨä)</a>
+      <a class="post-title-link" href="/post/安卓移动逆向(扫盲).html">安卓移动逆向(扫盲)</a>
     </h3>
   
 
@@ -326,21 +333,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ###Android ���� ###
-ûɶ��˵��,��ɨһ��ä
+        ###Android 逆向 ###
+没啥好说的,先扫一下盲
 
-###APK ���� ###
-asset�ļ��У���ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����r...
+###APK 组成 ###
+asset文件夹：资源目录1：asset和res都是资源目录但有所区别，见下面说明lib文件夹：  so库存放位置，一般由NDK编译得到，常见于使用游戏引擎或JNI native调用的工程中res文件夹 ：资源目录2：asset和res都是资源目录但有所区别，见下面说明classes...
     
 
         <a href="/post/安卓移动逆向(扫盲).html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android����/">Android����</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android逆向/">Android逆向</a></li></ul>
 
     </div>
     
@@ -385,7 +392,7 @@ android &#123;    ...    defaultConfig &#123;        ...        //  Lambda表达
     
 
         <a href="/post/Lambda表达式.html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
@@ -437,7 +444,7 @@ DrawerLayout- -&gt...
     
 
         <a href="/post/Material-Design-提供组件.html" class="post-more waves-effect waves-button">
-            阅读全文…
+            Continue reading...
         </a>
     </div>
     
@@ -474,7 +481,7 @@ DrawerLayout- -&gt...
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">

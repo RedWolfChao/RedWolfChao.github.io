@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://joryhe.coding.me/"/>
-  <updated>2017-05-10T09:28:08.807Z</updated>
+  <updated>2017-05-10T09:37:32.439Z</updated>
   <id>http://joryhe.coding.me/</id>
   
   <author>
@@ -16,381 +16,381 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>��׿�ƶ�����(��)-Smail_HelloWorld</title>
+    <title>安卓移动逆向(四)-Smail_HelloWorld</title>
     <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E5%9B%9B)-Smail_HelloWorld.html"/>
     <id>http://joryhe.coding.me/post/安卓移动逆向(四)-Smail_HelloWorld.html</id>
     <published>2017-05-08T10:18:18.000Z</published>
-    <updated>2017-05-10T09:28:08.807Z</updated>
+    <updated>2017-05-10T09:37:32.439Z</updated>
     
-    <content type="html"><![CDATA[<p>###���ֱ�дһ��Smail���͵�HelloWord###</p>
-<p><strong>��ʼ��д</strong></p>
-<p><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!</strong><br><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!</strong><br><strong>��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!!!!!</strong></p>
-<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#��������</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#���常��</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main&#123;[<span class="class">Ljava/lang/String;</span>&#125;V	<span class="comment">#����main()&lt;������&gt;</span></div><div class="line">	.registers 4	<span class="comment">#������ʹ��v0,v1,v2�Ĵ�����һ�������Ĵ���</span></div><div class="line">	.prologue	<span class="comment">#������ʼָ��</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#û�з���ֵvoid</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
-<p><strong>����һ��HelloWorld�ļܹ�����,������һ���ɱ������е�DEX�ļ�����С���ɲ���,�������ǽ���.prologue(������ʼָ��)�±�д��������:</strong></p>
-<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="comment">#��ָ��</span><span class="built_in"></span></div><div class="line">nop</div><div class="line">nop<span class="built_in"></span></div><div class="line">nop</div><div class="line"><span class="comment">#���ݶ���ָ��</span><span class="built_in"></span></div><div class="line">const/16 v0, 0x8	<span class="comment">#v0=0x8</span><span class="built_in"></span></div><div class="line">const/4 v1, 0x5		<span class="comment">#v1=0v5</span><span class="built_in"></span></div><div class="line">const/4 v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line"><span class="comment">#���ݲ���ָ��</span><span class="built_in"></span></div><div class="line">move v1, v2		<span class="comment">#v1=v2</span></div><div class="line"><span class="comment">#��������ָ��</span><span class="built_in"></span></div><div class="line">new-array v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span><span class="built_in"></span></div><div class="line">array-length v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line"><span class="comment">#ʵ������ָ��</span><span class="built_in"></span></div><div class="line">new-instance v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line"><span class="comment">#��������ָ��</span></div><div class="line">invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(��ȷ���ǲ���������˼) void init(v1)</span></div><div class="line"><span class="comment">#��תָ��</span><span class="built_in"></span></div><div class="line">if-nez v0,<span class="keyword"> :cond_0</span>	<span class="comment">#����v0!=0;����ת��cond_0</span><span class="built_in"></span></div><div class="line">goto : goto_0		<span class="comment">#�����ͽ���goto_0</span><span class="keyword"></span></div><div class="line">:cond_0			<span class="comment">#cond_0��ʼ</span></div><div class="line"><span class="comment">#����ת��ָ��</span><span class="built_in"></span></div><div class="line">int-to-float v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line"><span class="comment">#��������ָ��</span><span class="built_in"></span></div><div class="line">add-float v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line"><span class="comment">#�Ƚ�ָ��</span><span class="built_in"></span></div><div class="line">cmpl-float v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line"><span class="comment">#�ֶβ���ָ��</span><span class="built_in"></span></div><div class="line">sget-object v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span><span class="built_in"></span></div><div class="line">const-string v1,<span class="string">"HelloWorld"</span> <span class="comment">#�����ַ��� v1 = "HellpWorld"</span></div><div class="line"><span class="comment">#��������ָ��</span></div><div class="line">invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line"><span class="comment">#����ָ��</span><span class="keyword"></span></div><div class="line">:goto_0	<span class="comment">#goto_0 ��ʼ</span></div></pre></td></tr></table></figure>
-<p><strong>���ɴ�������,</strong></p>
-<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#��������</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#���常��</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main([<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#����main()&lt;������&gt;</span></div><div class="line">	.registers 4	<span class="comment">#������ʹ��v0,v1,v2�Ĵ�����һ�������Ĵ���</span></div><div class="line">	.prologue	<span class="comment">#������ʼָ��</span></div><div class="line">	<span class="comment">#��ָ��</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line">	<span class="comment">#���ݶ���ָ��</span></div><div class="line"><span class="built_in">	const/16 </span>v0, 0x8	<span class="comment">#v0=0x8</span></div><div class="line"><span class="built_in">	const/4 </span>v1, 0x5		<span class="comment">#v1=0v5</span></div><div class="line"><span class="built_in">	const/4 </span>v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line">	<span class="comment">#���ݲ���ָ��</span></div><div class="line"><span class="built_in">	move </span>v1, v2		<span class="comment">#v1=v2</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line"><span class="built_in">	new-array </span>v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span></div><div class="line"><span class="built_in">	array-length </span>v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line">	<span class="comment">#ʵ������ָ��</span></div><div class="line"><span class="built_in">	new-instance </span>v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line">	invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(��ȷ���ǲ���������˼) void init(v1)</span></div><div class="line">	<span class="comment">#��תָ��</span></div><div class="line"><span class="built_in">	if-nez </span>v0,<span class="keyword"> :cond_0</span>	<span class="comment">#����v0!=0;����ת��cond_0</span></div><div class="line"><span class="built_in">	goto </span>: goto_0		<span class="comment">#�����ͽ���goto_0</span></div><div class="line"><span class="keyword">	:cond_0</span>			<span class="comment">#cond_0��ʼ</span></div><div class="line">	<span class="comment">#����ת��ָ��</span></div><div class="line"><span class="built_in">	int-to-float </span>v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line"><span class="built_in">	add-float </span>v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line">	<span class="comment">#�Ƚ�ָ��</span></div><div class="line"><span class="built_in">	cmpl-float </span>v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line">	<span class="comment">#�ֶβ���ָ��</span></div><div class="line"><span class="built_in">	sget-object </span>v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span></div><div class="line"><span class="built_in">	const-string </span>v1,<span class="string">"HelloWorld"</span> <span class="comment">#�����ַ��� v1 = "HellpWorld"</span></div><div class="line">	<span class="comment">#��������ָ��</span></div><div class="line">	invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line">	<span class="comment">#����ָ��</span></div><div class="line"><span class="keyword">	:goto_0</span>	<span class="comment">#goto_0 ��ʼ</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#û�з���ֵvoid</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
-<p><strong>Ȼ�����ǿ���ͨ������java -jar E:\Reverse\smali_baksmali\smali.jar -o classes.dex HelloWorld.smali����Smali�ļ�������dex�ļ�(������”E:\Reverse\smali_baksmali\smali.jar”Ҫ�������˻��������Ͳ���������·����,������Ҳ��һ��)</strong></p>
-<p><strong>����û�б���,�ͻ��ڵ�ǰĿ¼������classes.dex(�����˾͸�����ʾ�����ͺ�)</strong></p>
-<p><strong>Ȼ�����ǽ�classes.dexѹ��ΪHelloWorld.zip</strong></p>
-<p><strong>���Ե�ʱ��Ҫ��֤��������һ���ֻ�(��Root)������һ��ģ����</strong></p>
-<p><strong>ִ��adb push HelloWorld.zip /data/local/ </strong></p>
-<p><strong>�е�ͯЬ���ܻᱨ������������</strong></p>
+    <content type="html"><![CDATA[<p>###着手编写一个Smail类型的HelloWord###</p>
+<p><strong>开始编写</strong></p>
+<p><strong>不要直接复制,要一个一个字符敲,否则没有意义!!</strong><br><strong>不要直接复制,要一个一个字符敲,否则没有意义!!!!</strong><br><strong>不要直接复制,要一个一个字符敲,否则没有意义!!!!!!</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#定义类名</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#定义父类</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main&#123;[<span class="class">Ljava/lang/String;</span>&#125;V	<span class="comment">#声明main()&lt;主函数&gt;</span></div><div class="line">	.registers 4	<span class="comment">#程序中使用v0,v1,v2寄存器与一个参数寄存器</span></div><div class="line">	.prologue	<span class="comment">#代码起始指令</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#没有返回值void</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
+<p><strong>这是一段HelloWorld的架构代码,定义了一个可编译运行的DEX文件的最小组成部分,下面我们将在.prologue(代码起始指令)下编写具体代码:</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="comment">#空指令</span><span class="built_in"></span></div><div class="line">nop</div><div class="line">nop<span class="built_in"></span></div><div class="line">nop</div><div class="line"><span class="comment">#数据定义指令</span><span class="built_in"></span></div><div class="line">const/16 v0, 0x8	<span class="comment">#v0=0x8</span><span class="built_in"></span></div><div class="line">const/4 v1, 0x5		<span class="comment">#v1=0v5</span><span class="built_in"></span></div><div class="line">const/4 v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line"><span class="comment">#数据操作指令</span><span class="built_in"></span></div><div class="line">move v1, v2		<span class="comment">#v1=v2</span></div><div class="line"><span class="comment">#数组操作指令</span><span class="built_in"></span></div><div class="line">new-array v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span><span class="built_in"></span></div><div class="line">array-length v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line"><span class="comment">#实例操作指令</span><span class="built_in"></span></div><div class="line">new-instance v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line"><span class="comment">#方法调用指令</span></div><div class="line">invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(不确定是不是这个意思) void init(v1)</span></div><div class="line"><span class="comment">#跳转指令</span><span class="built_in"></span></div><div class="line">if-nez v0,<span class="keyword"> :cond_0</span>	<span class="comment">#如果v0!=0;则跳转到cond_0</span><span class="built_in"></span></div><div class="line">goto : goto_0		<span class="comment">#否则就进入goto_0</span><span class="keyword"></span></div><div class="line">:cond_0			<span class="comment">#cond_0开始</span></div><div class="line"><span class="comment">#数据转换指令</span><span class="built_in"></span></div><div class="line">int-to-float v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line"><span class="comment">#数据运算指令</span><span class="built_in"></span></div><div class="line">add-float v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line"><span class="comment">#比较指令</span><span class="built_in"></span></div><div class="line">cmpl-float v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line"><span class="comment">#字段操作指令</span><span class="built_in"></span></div><div class="line">sget-object v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span><span class="built_in"></span></div><div class="line">const-string v1,<span class="string">"HelloWorld"</span> <span class="comment">#构造字符串 v1 = "HellpWorld"</span></div><div class="line"><span class="comment">#方法调用指令</span></div><div class="line">invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line"><span class="comment">#返回指令</span><span class="keyword"></span></div><div class="line">:goto_0	<span class="comment">#goto_0 开始</span></div></pre></td></tr></table></figure>
+<p><strong>完成代码如下,</strong></p>
+<figure class="highlight smali"><table><tr><td class="code"><pre><div class="line"><span class="keyword">.class</span><span class="keyword"> public</span> <span class="class">LHelloWorld;</span>	<span class="comment">#定义类名</span></div><div class="line"><span class="keyword">.super</span> <span class="class">Ljava/lang/Object;</span>	<span class="comment">#定义父类</span></div><div class="line"><span class="keyword">.method</span><span class="keyword"> public</span><span class="keyword"> static</span> main([<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#声明main()&lt;主函数&gt;</span></div><div class="line">	.registers 4	<span class="comment">#程序中使用v0,v1,v2寄存器与一个参数寄存器</span></div><div class="line">	.prologue	<span class="comment">#代码起始指令</span></div><div class="line">	<span class="comment">#空指令</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line"><span class="built_in">	nop</span></div><div class="line">	<span class="comment">#数据定义指令</span></div><div class="line"><span class="built_in">	const/16 </span>v0, 0x8	<span class="comment">#v0=0x8</span></div><div class="line"><span class="built_in">	const/4 </span>v1, 0x5		<span class="comment">#v1=0v5</span></div><div class="line"><span class="built_in">	const/4 </span>v2, 0x3		<span class="comment">#v2=0x3</span></div><div class="line">	<span class="comment">#数据操作指令</span></div><div class="line"><span class="built_in">	move </span>v1, v2		<span class="comment">#v1=v2</span></div><div class="line">	<span class="comment">#数组操作指令</span></div><div class="line"><span class="built_in">	new-array </span>v0,v0,[I	<span class="comment"># v0 = new int[v0(8)];</span></div><div class="line"><span class="built_in">	array-length </span>v1, v0	<span class="comment"># v1 = v0(8);</span></div><div class="line">	<span class="comment">#实例操作指令</span></div><div class="line"><span class="built_in">	new-instance </span>v1, <span class="class">Ljava/lang/StringBuilder;</span>	<span class="comment">#v1 = new StringBuilder();</span></div><div class="line">	<span class="comment">#方法调用指令</span></div><div class="line">	invoke-direct&#123;v1&#125;, <span class="class">Ljava/lang/StringBuilder;</span>-&gt;&lt;init&gt;()V		<span class="comment">#(不确定是不是这个意思) void init(v1)</span></div><div class="line">	<span class="comment">#跳转指令</span></div><div class="line"><span class="built_in">	if-nez </span>v0,<span class="keyword"> :cond_0</span>	<span class="comment">#如果v0!=0;则跳转到cond_0</span></div><div class="line"><span class="built_in">	goto </span>: goto_0		<span class="comment">#否则就进入goto_0</span></div><div class="line"><span class="keyword">	:cond_0</span>			<span class="comment">#cond_0开始</span></div><div class="line">	<span class="comment">#数据转换指令</span></div><div class="line"><span class="built_in">	int-to-float </span>v2,v2	<span class="comment">#v2 = (float)v2</span></div><div class="line">	<span class="comment">#数据运算指令</span></div><div class="line"><span class="built_in">	add-float </span>v2,v2,v2	<span class="comment">#v2 = v2+v2</span></div><div class="line">	<span class="comment">#比较指令</span></div><div class="line"><span class="built_in">	cmpl-float </span>v0,v2,v2	<span class="comment">#if(v2==v2) v0 = 0</span></div><div class="line">	<span class="comment">#字段操作指令</span></div><div class="line"><span class="built_in">	sget-object </span>v0,<span class="class">Ljava/lang/System;</span>-&gt;out:<span class="class">Ljava/io/PrintStream;</span>	<span class="comment"># v0 = out();</span></div><div class="line"><span class="built_in">	const-string </span>v1,<span class="string">"HelloWorld"</span> <span class="comment">#构造字符串 v1 = "HellpWorld"</span></div><div class="line">	<span class="comment">#方法调用指令</span></div><div class="line">	invoke-virtual&#123;v0,v1&#125;,<span class="class">Ljava/io/PrintStream;</span>-&gt;println(<span class="class">Ljava/lang/String;</span>)V	<span class="comment">#out.println(v1)</span></div><div class="line">	<span class="comment">#返回指令</span></div><div class="line"><span class="keyword">	:goto_0</span>	<span class="comment">#goto_0 开始</span></div><div class="line"><span class="built_in">	return-void	</span><span class="comment">#没有返回值void</span><span class="keyword"></span></div><div class="line">	.end method</div></pre></td></tr></table></figure>
+<p><strong>然后我们可以通过命令java -jar E:\Reverse\smali_baksmali\smali.jar -o classes.dex HelloWorld.smali来将Smali文件打包成dex文件(这里的”E:\Reverse\smali_baksmali\smali.jar”要是配置了环境变量就不用这样带路径了,下面的也是一样)</strong></p>
+<p><strong>如果没有报错,就会在当前目录下生成classes.dex(报错了就根据提示调错就好)</strong></p>
+<p><strong>然后我们将classes.dex压缩为HelloWorld.zip</strong></p>
+<p><strong>测试的时候要保证电脑连着一个手机(已Root)或者有一个模拟器</strong></p>
+<p><strong>执行adb push HelloWorld.zip /data/local/ </strong></p>
+<p><strong>有的童鞋可能会报下面这个错误</strong></p>
 <figure class="highlight subunit"><table><tr><td class="code"><pre><div class="line">adb server version (31) doesn't match this client (39)</div><div class="line">* daemon started successfully * </div><div class="line"><span class="keyword">error: </span>no devices/emulators found</div></pre></td></tr></table></figure>
-<p><strong>ԭ�����°�adb����,�������ؾɰ���adb�þɰ���adb���м���</strong></p>
-<p><strong>����,ִ��adb shell dalvikvm -cp /data/local/HelloWorld.zip HelloWorld�Ϳ�����,��ͼ</strong></p>
+<p><strong>原因是新版adb错误,我们下载旧版的adb用旧版的adb运行即可</strong></p>
+<p><strong>最后,执行adb shell dalvikvm -cp /data/local/HelloWorld.zip HelloWorld就可以了,附图</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170414185954352?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170414185954352?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><a href="http://download.csdn.net/detail/redwolfchao/9814373" target="_blank" rel="external">������Smali.jar</a></p>
-<p><a href="http://download.csdn.net/detail/redwolfchao/9814423" target="_blank" rel="external">�����Ǿɰ���adb</a></p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9814373" target="_blank" rel="external">这个是Smali.jar</a></p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9814423" target="_blank" rel="external">这个是旧版的adb</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###���ֱ�дһ��Smail���͵�HelloWord###&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;��ʼ��д&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;��Ҫֱ�Ӹ���,Ҫһ��һ���ַ���,����û������!!&lt;/strong&gt;&lt;br&gt;&lt;strong
+      &lt;p&gt;###着手编写一个Smail类型的HelloWord###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开始编写&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要直接复制,要一个一个字符敲,否则没有意义!!&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;不要直接复制,要一个一个字符敲,否则
     
     </summary>
     
     
-      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="Android逆向" scheme="http://joryhe.coding.me/tags/Android%E9%80%86%E5%90%91/"/>
     
   </entry>
   
   <entry>
-    <title>��׿�ƶ�����(��)-Android Dalvik������</title>
+    <title>安卓移动逆向(三)-Android Dalvik虚拟机</title>
     <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E4%B8%89)-Android%20Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA.html"/>
     <id>http://joryhe.coding.me/post/安卓移动逆向(三)-Android Dalvik虚拟机.html</id>
     <published>2017-05-03T05:13:13.000Z</published>
-    <updated>2017-05-10T09:27:37.239Z</updated>
+    <updated>2017-05-10T09:37:12.355Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>���Ҷ�֪��Java������������Java��������,Android������?</strong><br><strong>��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ���������ڱ�׼��Java�������ϵ�. GoogleΪAndroidƽ̨ר��������һ��������������Android����–Dalvik Virtual Machine,Ҳ����Dalvik��������</strong></p>
-<p><strong>��ƪ����:</strong></p>
+    <content type="html"><![CDATA[<p><strong>大家都知道Java程序是运行在Java虚拟机上,Android程序呢?</strong><br><strong>虽然Android平台使用Java语言来开发应用程序,但是Android程序却不是运行在标准的Java虚拟机上的. Google为Android平台专门设计了一套虚拟机来运行Android程序–Dalvik Virtual Machine,也就是Dalvik虚拟机了</strong></p>
+<p><strong>本篇作用:</strong></p>
 <ul>
-<li>ɨäDalvik������</li>
-<li><strong>�˽�Smail���﷨,�ܶ���Smail�ļ�</strong></li>
+<li>扫盲Dalvik虚拟机</li>
+<li><strong>了解Smail的语法,能读懂Smail文件</strong></li>
 </ul>
-<p>###Dalvik����###</p>
-<p>####Dalvik���ص�(������JVM)####</p>
+<p>###Dalvik概述###</p>
+<p>####Dalvik的特点(相对于JVM)####</p>
 <ul>
-<li>����С,ռ���ڴ�С;</li>
-<li>ר�е�DEX��ִ���ļ���ʽ,������С,ִ���ٶȸ���;</li>
-<li>�����ز���32λ����ֵ,Ѱַ�෽����,�ֶ���,��������;</li>
-<li>���ڼĴ����ܹ�,��ӵ��һ�����ɵ�ָ��ϵͳ</li>
-<li>�ṩ�˶����������ڹ���,��ջ����,�̹߳���,��ȫ���쳣�����Լ��������յ���Ҫ����;</li>
-<li>���е�Android������������Androidϵͳ������,ÿ�����̶�Ӧ��һ��Dalvik������ʵ��;</li>
+<li>体积小,占用内存小;</li>
+<li>专有的DEX可执行文件格式,体积更小,执行速度更快;</li>
+<li>常量池采用32位索引值,寻址类方法名,字段名,常亮更快;</li>
+<li>基于寄存器架构,并拥有一套完成的指令系统</li>
+<li>提供了对象生命周期管理,堆栈管理,线程管理,安全和异常管理以及垃圾回收等重要功能;</li>
+<li>所有的Android程序都运行在Android系统进程里,每个进程对应着一个Dalvik虚拟机实例;</li>
 </ul>
 <hr>
-<p>####Dalvik��������Java������������####</p>
+<p>####Dalvik虚拟机与Java虚拟机的区别####</p>
 <ol>
-<li>Java���������е�Java�ֽ���,Dalvik���������е���Dalvik�ֽ���</li>
-<li><p><strong>Dalvik��ִ���ļ���������С</strong><br>��������:<br>SDK����һ������dx�Ĺ��߸�����Java�ֽ���ת��ΪDalvik�ֽ���.dx���߶�Java���ļ���������,���������ļ��г��ֵ�����������Ϣ,�����������ڳ�ʼ��ʱ�����ظ����ļ���������������.</p>
-<p>�ٸ�����:<br>��Java���д������ַ��������ڶ������ļ��б��ظ�ʹ��,��Щ������Ϣ��ֱ�������ļ�������,ͬ��Ҳ������Ӱ�������������ļ���Ч��.dx��������������������ר�ŵĴ���,��������Java���ļ��еĳ����ؽ��зֽ�,�������е�������Ϣ,�������ϳ�һ��������,���е����ļ�����ͬһ��������.dx����ת��������ͼ��ʾ,����dx���߶Գ����ص�ѹ��,�ǵ���ͬ���ַ���,������DEX�ļ���ֻ����һ��,�Ӷ���С���ļ�������.</p>
+<li>Java虚拟机运行的Java字节码,Dalvik虚拟机运行的是Dalvik字节码</li>
+<li><p><strong>Dalvik可执行文件的体积更小</strong><br>稍作解析:<br>SDK中有一个叫做dx的工具负责将Java字节码转换为Dalvik字节码.dx工具对Java类文件重新排列,消除在类文件中出现的所有冗余信息,避免虚拟机在初始化时出现重复的文件加载与解析过程.</p>
+<p>举个栗子:<br>在Java中有大量的字符串常量在多个类文件中被重复使用,这些荣誉信息会直接增加文件的体积,同事也会严重影响虚拟机解析文件的效率.dx工具针对这个问题做了专门的处理,它将所有Java类文件中的常量池进行分解,消除其中的冗余信息,重新组合成一个常量池,所有的类文件共享同一个常量池.dx工具转换过程如图所示,由于dx工具对常量池的压缩,是的相同的字符串,常量在DEX文件中只出现一次,从而减小了文件的体积.</p>
 </li>
 </ol>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="dx����ת������" title="">
+                    <img src="http://img.blog.csdn.net/20170413150832180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="dx工具转换过程" title="">
                 </div>
-                <div class="image-caption">dx����ת������</div>
+                <div class="image-caption">dx工具转换过程</div>
             </figure>
 <ol>
-<li><p><strong>Java��������Dalvik�������ܹ���ͬ</strong></p>
-<p>����˵һ��:Java����������ջ�ܹ�,Dalvik���ڼĴ����ܹ�;</p>
+<li><p><strong>Java虚拟机与Dalvik虚拟机架构不同</strong></p>
+<p>简单说一下:Java虚拟机基于栈架构,Dalvik基于寄存器架构;</p>
 </li>
 </ol>
 <hr>
-<p>###Dalvikָ����ʽ###</p>
-<p><strong>һ��Dalvik����������һϵ�е�Dalvikָ������,ָ���﷨��ָ����λ������ָ����ʽ��ʶ������.λ����Լ������</strong></p>
+<p>###Dalvik指令格式###</p>
+<p><strong>一般Dalvik汇编代码由一系列的Dalvik指令组成,指令语法由指令的位描述与指令格式标识来决定.位描述约定如下</strong></p>
 <ul>
-<li>ÿ16λ���ֲ��ÿո��ָ��;</li>
-<li>ÿ����ĸ��ʾ��λ,ÿ����ĸ��˳���Ӹ��ֽڿ�ʼ,���е����ֽ�.ÿ��λ֮��<strong>����</strong>������”|”����ʾ��ͬ������;</li>
-<li>˳������A-Z�ķ�����д��ĸ��Ϊһ��4λ�Ĳ�����,op��ʾһ��8λ�Ĳ�����;</li>
-<li>“?”����ʾ�����ֶε�����λΪ0ֵ;</li>
+<li>每16位的字采用空格分割开来;</li>
+<li>每个字母表示四位,每个字母按顺序从高字节开始,排列到低字节.每四位之间<strong>可能</strong>用竖线”|”来表示不同的内容;</li>
+<li>顺序采用A-Z的翻个大写字母作为一个4位的操作码,op表示一个8位的操作码;</li>
+<li>“?”来表示这个字段的所有位为0值;</li>
 </ul>
-<p><strong>����</strong><br>  “A|B|op BBBB F|E|D|C”<br>  ָ���м��������ո�,ÿ���ֿ��Ĳ�����16λ,����3��16λ��������ָ��;<br>  ��һ��16λ��”A|B|op” ��8λ��A��B����,���ֽ��ɲ�����op����;<br>  �ڶ���16λ��BBBB����,����ʾһ��16λ��ƫ��ֵ;<br>  ������16λ�ֱ���F,E,D,C���ĸ��ֽ�����,���������Ǳ�ʾ�Ĵ����Ĳ���.</p>
-<p><strong>����ʹ��λ��ʶ���޷�ȷ��һ��ָ������˼,����ͨ��ָ����ʽ��ʶ��ָ��ָ���ĸ�ʽ����,Լ������</strong></p>
+<p><strong>栗子</strong><br>  “A|B|op BBBB F|E|D|C”<br>  指令中间有两个空格,每个分开的部分是16位,共有3个16位组成这条指令;<br>  第一个16位是”A|B|op” 高8位由A和B组成,低字节由操作码op组成;<br>  第二个16位由BBBB组成,他表示一个16位的偏移值;<br>  第三个16位分别由F,E,D,C共四个字节组成,在这里他们表示寄存器的参数.</p>
+<p><strong>单独使用位标识还无法确定一条指令的意思,必须通过指令格式标识来指定指令的格式编码,约定如下</strong></p>
 <ul>
-<li>ָ����ʽ��ʶ�����������ַ�����,ǰ����������,����һ������ĸ;</li>
-<li>��һ������ʽ��ʶָ���ɶ��ٸ�16λ��������;</li>
-<li>�ڶ������ֱ�ʶָ������ʹ�üĴ����ĸ���,��������”r”��ʶʹ��һ����Χ�ڵļĴ���;</li>
-<li>��������ĸΪ������,��ʶָ���õ��Ķ������ݵ�����,����ͼ:</li>
-<li><p>����һ������������ ��ĩβ���ܻ���������һ����ĸ,������”s”��ʾָ�����þ�̬����,������”i”��ʾָ��Ӧ�ñ���������.</p>
-<p><img src="http://img.blog.csdn.net/20170413152723245?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="ָ����ʽ��ʶ��������"></p>
+<li>指令格式标识大多由三个字符组成,前两个是数字,最后一个是字母;</li>
+<li>第一个数字式标识指令由多少个16位的字组成;</li>
+<li>第二个数字标识指令最多使用寄存器的个数,特殊标记”r”标识使用一定范围内的寄存器;</li>
+<li>第三个字母为类型码,标识指令用到的额外数据的类型,见下图:</li>
+<li><p>还有一种特殊的情况 是末尾可能还会多出另一个字母,如果是”s”表示指令采用静态链接,如果是”i”表示指令应该被内联处理.</p>
+<p><img src="http://img.blog.csdn.net/20170413152723245?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="指令格式标识的类型码"></p>
 </li>
 </ul>
-<p><strong>����</strong></p>
-<p>“22x” ��������Ϣ���Զ���</p>
+<p><strong>栗子</strong></p>
+<p>“22x” 有三条信息可以读出</p>
 <ol>
-<li>ָ����2��16λ������</li>
-<li>ָ��ʹ��2���Ĵ���</li>
-<li>û��ʹ�õ�����������</li>
+<li>指令由2个16位字组成</li>
+<li>指令使用2个寄存器</li>
+<li>没有使用到额外的数据</li>
 </ol>
-<p><strong>����,Dalvikָ�����﷨����һЩ˵��,Լ������</strong></p>
+<p><strong>另外,Dalvik指令对语法做了一些说明,约定如下</strong></p>
 <ul>
-<li>ÿ��ָ���Ӳ����뿪ʼ,������������,������������,ÿ������֮�����ö��ŷֿ�;</li>
-<li>ÿ��ָ���Ĳ�����ָ���ĵ�һ���ֿ�ʼ,opλ�ڵ�8λ,��8λ������һ��8λ�Ĳ���Ҳ����������4λ�Ĳ���,������Ϊ��.����ָ���16λ,�������Ĳ���������Ϊ����;</li>
-<li>��������ʹ��”vX”�ķ�ʽ��ʶ,��������һ���Ĵ���,��v0,v1��;</li>
-<li>������������”#+X”�ķ�ʽ,��������һ����������;</li>
-<li>������������”+X”�ķ�ʽ,��������һ������ָ���ĵ�ַƫ��;</li>
-<li>������������”kind@X”�ķ�ʽ,��������һ������������ֵ.����kind��ʾ����������,����string@BBBB,��ʾ�ľ����ַ�������������BBBB;</li>
+<li>每条指令从操作码开始,后面紧跟参数,参数个数不定,每个参数之间采用逗号分开;</li>
+<li>每条指令的参数从指令的第一部分开始,op位于低8位,高8位可以是一个8位的参数也可以是两个4位的参数,还可以为空.如果指令超过16位,则后面的部分依次作为参数;</li>
+<li>如果参数使用”vX”的方式标识,表明它是一个寄存器,如v0,v1等;</li>
+<li>如果参数采用”#+X”的方式,表明它是一个常量数字;</li>
+<li>如果参数采用”+X”的方式,表明它是一个相对指令的地址偏移;</li>
+<li>如果参数采用”kind@X”的方式,表明它是一个常量池索引值.其中kind表示常量池类型,例如string@BBBB,表示的就是字符串常量池索引BBBB;</li>
 </ul>
-<p><strong>����</strong><br>“op vAA string@BBBB”<br>��8λΪ��,�õ�1���Ĵ�������vAA,���õ�һ���ַ�������������BBBB;</p>
+<p><strong>栗子</strong><br>“op vAA string@BBBB”<br>高8位为空,用到1个寄存器参数vAA,还用到一个字符串常量池索引BBBB;</p>
 <hr>
-<p>###Dalvik�Ĵ���###</p>
-<p><strong>ɨä������,��ʼ�ص���</strong></p>
-<p>####Dalvik�ֽ���������,����,���ֶα�ʾ����####</p>
+<p>###Dalvik寄存器###</p>
+<p><strong>扫盲结束了,开始重点了</strong></p>
+<p>####Dalvik字节码的类型,方法,与字段表示方法####</p>
 <ol>
-<li><strong>����</strong><br>Dalvik�ֽ���ֻ����������,����������,������˵,��ͼ;<figure class="image-bubble">
+<li><strong>类型</strong><br>Dalvik字节码只有两种类型,基本与引用,话不多说,看图;<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413155625862?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                    <img src="http://img.blog.csdn.net/20170413155625862?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="类型" title="">
                 </div>
-                <div class="image-caption">����</div>
+                <div class="image-caption">类型</div>
             </figure>
-ÿ��Dalvik�Ĵ�������32λ��С,����С�����ߵ���32λ���ȵ�������˵,һ���Ĵ����Ϳ��Դ��Ÿ����͵�ֵ,����J(long),D(double)��64λ������,���ǵ�ֵ��ʹ�����������Ĵ������洢��,v0��v1����vN��vN+1��;<br>L�ͺ�������,��ʾ�κ�һ��Java��,��Dalvik����������,������” Lpackage/name/ObjectName; “��ʾ,ע������һ���ֺ�,����” Ljava/lang/String;”�൱��String;<br>[���;������е�����,[���������������͵�������,��[I��ʾһ������һά����,-&gt;int[],[[I��ʾint[][]&lt;—&gt; [Ljava/lang/String; ��ʾ�������� String [];</li>
-<li><strong>����</strong><br>Dalvikʹ�÷�����,���Ͳ����뷵��ֵ������һ������;<br>��ʽ����:<br>Lpackage/name/ObjectName;-&gt;MethodName(III)Z<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>MethodName������<br>(III)����,����int����<br>Z����ֵvoid<br><strong>����</strong><br>method(I[[IILjava/lang/String;[Ljava/lang/String;)Ljava/lang/String;<br>�ȿ�,����������֪ʶ,����ת��ΪJava��ʽ�Ĵ���Ϊ:<br>String method(int ,int[][],String,String[])</li>
-<li><strong>�ֶ�</strong><br>�ֶκͷ���������,����û�в����ͷ���ֵ,ȡ����֮�����ֶε�����,��ʽ����<br>Lpackage/name/ObjectName;-&gt;FieldName:TYPE<br>˵��:<br>Lpackage/name/ObjectName;��һ������;<br>FieldName�ֶ���<br>TYPE�ֶ�����<br>FieldName��TYPE��ð�Ÿ���<br><strong>����</strong><br>name:Ljava/lang/String;<br>ת��:<br>String name;<br><strong>Dalvik�����е��ֶδ�����.fieldָ�ͷ,�����ֶ����Ͳ�ͬ,���ֶ�ָ���Ŀ�ʼ,���ܻ��õ�����”#”����ע��</strong>;</li>
+每个Dalvik寄存器都是32位大小,对于小鱼或者等于32位长度的类型来说,一个寄存器就可以存放该类型的值,而像J(long),D(double)等64位的类型,它们的值是使用相邻量个寄存器来存储的,v0和v1或者vN与vN+1等;<br>L就好理解了,表示任何一个Java类,在Dalvik汇编代码中,它们以” Lpackage/name/ObjectName; “表示,注意最后一个分号,比如” Ljava/lang/String;”相当于String;<br>[类型就是所有的数组,[后面紧跟基本类型的描述符,如[I表示一个整型一维数组,-&gt;int[],[[I表示int[][]&lt;—&gt; [Ljava/lang/String; 表示对象数组 String [];</li>
+<li><strong>方法</strong><br>Dalvik使用方法名,类型参数与返回值来描述一个方法;<br>格式如下:<br>Lpackage/name/ObjectName;-&gt;MethodName(III)Z<br>说明:<br>Lpackage/name/ObjectName;是一个类型;<br>MethodName方法名<br>(III)参数,三个int参数<br>Z返回值void<br><strong>栗子</strong><br>method(I[[IILjava/lang/String;[Ljava/lang/String;)Ljava/lang/String;<br>咳咳,按照上面的知识,将其转换为Java形式的代码为:<br>String method(int ,int[][],String,String[])</li>
+<li><strong>字段</strong><br>字段和方法很相似,就是没有参数和返回值,取而代之的是字段的类型,格式如下<br>Lpackage/name/ObjectName;-&gt;FieldName:TYPE<br>说明:<br>Lpackage/name/ObjectName;是一个类型;<br>FieldName字段名<br>TYPE字段类型<br>FieldName与TYPE用冒号隔开<br><strong>栗子</strong><br>name:Ljava/lang/String;<br>转换:<br>String name;<br><strong>Dalvik代码中的字段代码以.field指令开头,根据字段类型不同,在字段指令的开始,可能会用到井号”#”加以注释</strong>;</li>
 </ol>
 <hr>
-<p>###Dalvikָ�###</p>
-<p>####ָ���ص�####</p>
-<p>Dalvikָ���ڵ��ø�ʽ��ģ����C���Եĵ���Լ��.Dalvikָ���﷨�����ʷ��������ص�:</p>
+<p>###Dalvik指令集###</p>
+<p>####指令特点####</p>
+<p>Dalvik指令在调用格式上模仿了C语言的调用约定.Dalvik指令语法与助词符有如下特点:</p>
 <ul>
-<li>�������ô�Ŀ��(destination)��Դ(source)�ķ�ʽ;</li>
-<li>�����ֽ����Ĳ�����ѡ���Ĳ�ͬ,һЩ�ֽ����������ֽ�����׺��������,��Щ��׺ͨ�����ֽ��������ƺ�����б��”/“���ָ���;</li>
-<li>��ָ���������,����ֵ�е�ÿ����ĸ��ʾ����Ϊ4λ;</li>
-<li>�����ֽ����Ĵ�С�����͵Ĳ�ͬ,һЩ�ֽ������������ƺ�׺����������:<ul>
-<li>32λ�������͵��ֽ���,δ�����κκ�׺;</li>
-<li>64λ�������͵��ֽ�����-wide��׺;</li>
-<li>�������͵��ֽ������ݾ����������Ӻ�׺,���ǿ�����-boolean,-byte,-char,-short,-int,-long,-float,-double,-object,-string,-class,-void֮һ;</li>
+<li>参数采用从目标(destination)到源(source)的方式;</li>
+<li>根据字节码的布局与选项的不同,一些字节码添加了字节码后缀消除歧义,这些后缀通过在字节码主名称后添加斜杠”/“来分隔开;</li>
+<li>在指令集的描述中,宽度值中的每个字母表示宽度为4位;</li>
+<li>根据字节码的大小与类型的不同,一些字节码添加了名称后缀以消除歧义:<ul>
+<li>32位常规类型的字节码,未添加任何后缀;</li>
+<li>64位常规类型的字节码以-wide后缀;</li>
+<li>特殊类型的字节码根据具体类型添加后缀,他们可以是-boolean,-byte,-char,-short,-int,-long,-float,-double,-object,-string,-class,-void之一;</li>
 </ul>
 </li>
 </ul>
-<p><strong>����</strong><br>“move-wide/from16 vAA,vBBBB”</p>
-<p>moveΪ�����ֽ���.��ʶ���ǻ�������;<br>wideΪ���ƺ�׺.��ʶָ�����������ݿ���(64λ);<br>from16λ�ֽ�����׺.��ʶԴΪһ��16λ�ļĴ������ñ���;<br>vAAΪĿ�ļĴ���,��ʼ����Դ��ǰ�� ȡֵ��ΧΪv0-v2^8-1(255);<br>vBBBBΪԴ�Ĵ���,ȡֵ��ΧΪv0-v2^16-1(65535)</p>
-<p><strong>�ղ���ָ��</strong></p>
-<p>�ղ���ָ�������Ƿ�Ϊnop,����ֵ��00,ͨ��nopָ��ù�����������;,ûɶ����;</p>
-<p><strong>���ݲ���ָ��</strong></p>
-<p>���ݲ���ָ��Ϊ<strong>move</strong>.moveָ����ԭ��Ϊmove destination,source����move destination,moveָ�������ֽ����Ĵ�С�����Ͳ�ͬ,���������ϲ�ͬ�ĺ�׺.<br><strong>����(��ʾ̫��ֱ����ͼ,�����)</strong></p>
+<p><strong>栗子</strong><br>“move-wide/from16 vAA,vBBBB”</p>
+<p>move为基础字节码.标识这是基本操作;<br>wide为名称后缀.标识指令操作的数据宽度(64位);<br>from16位字节码后缀.标识源为一个16位的寄存器引用变量;<br>vAA为目的寄存器,它始终在源的前面 取值范围为v0-v2^8-1(255);<br>vBBBB为源寄存器,取值范围为v0-v2^16-1(65535)</p>
+<p><strong>空操作指令</strong></p>
+<p>空操作指令的助记符为nop,他的值是00,通常nop指令被用过对齐代码用途,没啥大用;</p>
+<p><strong>数据操作指令</strong></p>
+<p>数据操作指令为<strong>move</strong>.move指令的原型为move destination,source或者move destination,move指令根据字节码的大小与类型不同,后面会跟上不同的后缀.<br><strong>栗子(表示太多直接上图,都差不多)</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413171403627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="���ݲ���ָ��" title="">
+                    <img src="http://img.blog.csdn.net/20170413171403627?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="数据操作指令" title="">
                 </div>
-                <div class="image-caption">���ݲ���ָ��</div>
+                <div class="image-caption">数据操作指令</div>
             </figure>
-<p><strong>����ָ��</strong></p>
-<p>����ָ��ָ���Ǻ�����βʱ���е�����һ��ָ��.���Ļ����ֽ���λ<strong>return</strong>,����������������ָ��<br><strong>����</strong></p>
+<p><strong>返回指令</strong></p>
+<p>返回指令指的是函数结尾时运行的最后一条指令.他的基础字节码位<strong>return</strong>,共有以下四条返回指令<br><strong>栗子</strong></p>
 <ol>
-<li>“return-void” ����һ��void</li>
-<li>“return vAA” ����һ��32λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
-<li>“return-wide vAA” ����һ��64λ�Ƕ������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
-<li>“return-object vAA” ����һ���������͵�ֵ,����ֵ�Ĵ���λ8λ�ļĴ���vAA;</li>
+<li>“return-void” 返回一个void</li>
+<li>“return vAA” 返回一个32位非对象类型的值,返回值寄存器位8位的寄存器vAA;</li>
+<li>“return-wide vAA” 返回一个64位非对象类型的值,返回值寄存器位8位的寄存器vAA;</li>
+<li>“return-object vAA” 返回一个对象类型的值,返回值寄存器位8位的寄存器vAA;</li>
 </ol>
-<p><strong>���ݶ���ָ��</strong></p>
-<p>���ݶ���ָ�����������������õ��ı���,�ַ���,��������,���Ļ����ֽ���Ϊ<strong>const</strong><br><strong>����(��ʾ̫��ֱ����ͼ-_-)</strong><br><figure class="image-bubble">
+<p><strong>数据定义指令</strong></p>
+<p>数据定义指令用来定义程序中用到的变量,字符串,类等数据,他的基础字节码为<strong>const</strong><br><strong>栗子(表示太多直接上图-_-)</strong><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413172400594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170413172400594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413172418327?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170413172418327?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure></p>
-<p><strong>��ָ��</strong></p>
-<p>��ָ�������ڶ��̳߳����ж�ͬһ�����Ĳ���,Dalvikָ�����������ָ��.</p>
+<p><strong>锁指令</strong></p>
+<p>锁指令多用在多线程程序中对同一对象的操作,Dalvik指令集中有两条锁指令.</p>
 <ol>
-<li>“monitor-enter vAA” Ϊָ���Ķ�����ȡ��</li>
-<li>“monitor-exit vAA”Ϊָ���Ķ����ͷ���</li>
+<li>“monitor-enter vAA” 为指定的对象获取锁</li>
+<li>“monitor-exit vAA”为指定的对象释放锁</li>
 </ol>
-<p><strong>ʵ������ָ��</strong></p>
-<p>��ʵ�����صĲ�������ʵ�������ʹ���,���鼰�½���;</p>
+<p><strong>实例操作指令</strong></p>
+<p>与实例相关的操作包括实例的类型传换,检查及新建等;</p>
 <ul>
-<li>“check-case vAA,type@BBBB” ��vAA�еĶ�������ǿתΪBBBB����;</li>
+<li>“check-case vAA,type@BBBB” 将vAA中的对象引用强转为BBBB类型;</li>
 </ul>
 <figure class="highlight lisp"><table><tr><td class="code"><pre><div class="line">(<span class="name">BBBB</span>)vAA<span class="comment">;</span></div></pre></td></tr></table></figure>
 <ul>
-<li>“instance-of vA,vB,type@CCCC” �ж�vB�еĶ��������Ƿ���ת��CCCC����,��vA=1,����vA=0;</li>
+<li>“instance-of vA,vB,type@CCCC” 判断vB中的对象引用是否能转成CCCC类型,能vA=1,不能vA=0;</li>
 </ul>
 <figure class="highlight aspectj"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(vB.<span class="keyword">instanceof</span>(type<span class="meta">@CCCC</span>))&#123;</div><div class="line">	vA =<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	vA = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>“new-instance vAA,type@BBBB” �½�һ��BBBB�Ķ���vAA,BBBB����Ϊ����</li>
+<li>“new-instance vAA,type@BBBB” 新建一个BBBB的对象vAA,BBBB不能为数组</li>
 </ul>
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">BBBB vAA</span> = new BBBB();</div></pre></td></tr></table></figure>
 <ul>
-<li>“check-cast/jumbo vAAAA,type@BBBBBBBB” ��”check-case vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
-<li>“instance-of/jumbo vAAAA,vBBBB,type@CCCCCCCC”��”instance-of vAA,vBB,type@CCCC”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
-<li>“new-instance/jumbo vAAAA,type@BBBBBBBB”��”new-instance vAA,type@BBBB”������ͬ,ֻ��ȡֵ��Χ����(Android 4.0����)</li>
+<li>“check-cast/jumbo vAAAA,type@BBBBBBBB” 与”check-case vAA,type@BBBB”作用相同,只是取值范围更大(Android 4.0新增)</li>
+<li>“instance-of/jumbo vAAAA,vBBBB,type@CCCCCCCC”与”instance-of vAA,vBB,type@CCCC”作用相同,只是取值范围更大(Android 4.0新增)</li>
+<li>“new-instance/jumbo vAAAA,type@BBBBBBBB”与”new-instance vAA,type@BBBB”作用相同,只是取值范围更大(Android 4.0新增)</li>
 </ul>
-<p><strong>��������ָ��</strong></p>
-<p>��������������ȡ���鳤��(ָ������������Ŀ����),�½�����,���鸳ֵ,����Ԫ��ȡֵ�븳ֵ�Ȳ���;</p>
+<p><strong>数组操作指令</strong></p>
+<p>数组操作包括获取数组长度(指的是数组的条目个数),新建数组,数组赋值,数组元素取值与赋值等操作;</p>
 <ul>
 <li>“array-length vA,vB” </li>
 </ul>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = vB.length<span class="comment">; //	��vB�ĳ��ȸ�ֵ��vA</span></div></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = vB.length<span class="comment">; //	将vB的长度赋值给vA</span></div></pre></td></tr></table></figure>
 <ul>
 <li>“new-array vA,vB,type@CCCC”</li>
 </ul>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = CCCC[vB]<span class="comment">; //	����һ��vB����CCCC���͵����鸳ֵ��vA</span></div></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">vA</span> = CCCC[vB]<span class="comment">; //	构建一个vB大的CCCC类型的数组赋值给vA</span></div></pre></td></tr></table></figure>
 <ul>
-<li>�����ĸ�ͼ<figure class="image-bubble">
+<li>其余的附图<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413174546498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170413174546498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
 </li>
 </ul>
-<p><strong>�쳣ָ��</strong></p>
-<p>Dalvik ָ�����һ��ָ�������׳��쳣</p>
+<p><strong>异常指令</strong></p>
+<p>Dalvik 指令集中有一条指令用于抛出异常</p>
 <ul>
-<li>“throw vAA” �׳�vAA�Ĵ�����ָ�����͵��쳣</li>
+<li>“throw vAA” 抛出vAA寄存器中指定类型的异常</li>
 </ul>
-<p><strong>��תָ��</strong></p>
-<p>Dalvikָ�����������תָ��:��������ת(goto),��֧��ת(switch),������ת(if)</p>
+<p><strong>跳转指令</strong></p>
+<p>Dalvik指令集中有三种跳转指令:无条件跳转(goto),分支跳转(switch),条件跳转(if)</p>
 <ul>
-<li>“goto +AA” ��������ת��ָ��ƫ�ƴ�,ƫ����AA����Ϊ0;</li>
-<li>“goto/16+AAAA” ��������ת��ָ��ƫ�ƴ�,ƫ����AAAA����Ϊ0;</li>
-<li>“goto/32+AAAAAAAA” ��������ת��ָ��ƫ�ƴ�;</li>
-<li>“packed-switch vAA,+BBBBBBBB” ��֧��תָ��. vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��packed-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ�ǹ��ɵ�����.(����ô��ס�ͺ�,����Ȥ�����Ұٶ�..)</li>
-<li>“sparse-switch vAA,+BBBBBBBB”��֧��תָ��,vAA�Ĵ���Ϊswitch��֧����Ҫ�жϵ�ֵ��(switch(vAA)),BBBBBBBBָ��һ��sparse-switch-payload��ʽ��ƫ�Ʊ�,���е�ֵ���޹��ɵ�ƫ����.</li>
-<li>“if-test vA,vB,+CCCC” ������תָ��,�Ƚ�vA��vB��ֵ,�����ȽϽ�����������ת��CCCCָ����ƫ�ƴ�,ƫ����CCCC����Ϊ0,if-test���͵�ָ�������¼���:<ul>
-<li>��if-eq vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
-<li>��if-ne vA, vB, :cond_xx�� ����vA������vB����ת��:cond_xx </li>
-<li>��if-lt vA, vB, :cond_xx�� ����vAС��vB����ת��:cond_xx </li>
-<li>��if-ge vA, vB, :cond_xx�� ����vA���ڵ���vB����ת��:cond_xx </li>
-<li>��if-gt vA, vB, :cond_xx�� ����vA����vB����ת��:cond_xx </li>
-<li>��if-le vA, vB, :cond_xx�� ����vAС�ڵ���vB����ת��:cond_xx </li>
+<li>“goto +AA” 无条件跳转到指定偏移处,偏移量AA不能为0;</li>
+<li>“goto/16+AAAA” 无条件跳转到指定偏移处,偏移量AAAA不能为0;</li>
+<li>“goto/32+AAAAAAAA” 无条件跳转到指定偏移处;</li>
+<li>“packed-switch vAA,+BBBBBBBB” 分支跳转指令. vAA寄存器为switch分支中需要判断的值即(switch(vAA)),BBBBBBBB指向一个packed-switch-payload格式的偏移表,表中的值是规律递增的.(先这么记住就好,感兴趣可以找百度..)</li>
+<li>“sparse-switch vAA,+BBBBBBBB”分支跳转指令,vAA寄存器为switch分支中需要判断的值即(switch(vAA)),BBBBBBBB指向一个sparse-switch-payload格式的偏移表,表中的值是无规律的偏移量.</li>
+<li>“if-test vA,vB,+CCCC” 条件跳转指令,比较vA与vB的值,如果比较结果满足就跳转到CCCC指定的偏移处,偏移量CCCC不能为0,if-test类型的指令有以下几条:<ul>
+<li>“if-eq vA, vB, :cond_xx” 如果vA等于vB则跳转到:cond_xx </li>
+<li>“if-ne vA, vB, :cond_xx” 如果vA不等于vB则跳转到:cond_xx </li>
+<li>“if-lt vA, vB, :cond_xx” 如果vA小于vB则跳转到:cond_xx </li>
+<li>“if-ge vA, vB, :cond_xx” 如果vA大于等于vB则跳转到:cond_xx </li>
+<li>“if-gt vA, vB, :cond_xx” 如果vA大于vB则跳转到:cond_xx </li>
+<li>“if-le vA, vB, :cond_xx” 如果vA小于等于vB则跳转到:cond_xx </li>
 </ul>
 </li>
-<li>“if-testz vAA,+BBBB”������תָ��,��vAA��0���Ƚ�,�����������߲�������������ת��BBBB��ָ��ƫ�ƴ�BBBB����Ϊ0, if-testz���͵�ָ�������¼���:<ul>
-<li>��if-eqz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
-<li>��if-nez vA, :cond_xx�� ����vA������0����ת��:cond_xx </li>
-<li>��if-ltz vA, :cond_xx�� ����vAС��0����ת��:cond_xx </li>
-<li>��if-gez vA, :cond_xx�� ����vA���ڵ���0����ת��:cond_xx </li>
-<li>��if-gtz vA, :cond_xx�� ����vA����0����ת��:cond_xx </li>
-<li>��if-lez vA, :cond_xx�� ����vAС�ڵ���0����ת��:cond_xx</li>
+<li>“if-testz vAA,+BBBB”条件跳转指令,那vAA与0作比较,满足结果或者不满足结果就跳转到BBBB的指定偏移处BBBB不能为0, if-testz类型的指令有以下几条:<ul>
+<li>“if-eqz vA, :cond_xx” 如果vA等于0则跳转到:cond_xx </li>
+<li>“if-nez vA, :cond_xx” 如果vA不等于0则跳转到:cond_xx </li>
+<li>“if-ltz vA, :cond_xx” 如果vA小于0则跳转到:cond_xx </li>
+<li>“if-gez vA, :cond_xx” 如果vA大于等于0则跳转到:cond_xx </li>
+<li>“if-gtz vA, :cond_xx” 如果vA大于0则跳转到:cond_xx </li>
+<li>“if-lez vA, :cond_xx” 如果vA小于等于0则跳转到:cond_xx</li>
 </ul>
 </li>
 </ul>
-<p><strong>�Ƚ�ָ��</strong></p>
-<p>�Ƚ�ָ�����ڶ������Ĵ�����ֵ(�����ͻ��߳�����)���бȽϸ�ʽΪ:<br>“cmpkind vAA,vBB,vCC” </p>
-<p>Dalvikָ��й���5���Ƚ�ָ��:</p>
+<p><strong>比较指令</strong></p>
+<p>比较指令用于对两个寄存器的值(浮点型或者长整型)进行比较格式为:<br>“cmpkind vAA,vBB,vCC” </p>
+<p>Dalvik指令集中共有5条比较指令:</p>
 <ul>
-<li><p>“cmpl-float” �Ƚ�����floatֵ;</p>
+<li><p>“cmpl-float” 比较两个float值;</p>
 <figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>“cmpg-float” �Ƚ�����float��ֵ</p>
+<li><p>“cmpg-float” 比较两个float的值</p>
 <figure class="highlight nix"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="attr">vBB</span> == vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> =<span class="number">0</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&lt;vCC)&#123;</div><div class="line">	<span class="attr">vAA</span> = -<span class="number">1</span>;</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(vBB&gt;vCC&gt;)&#123;</div><div class="line">	<span class="attr">vAA</span> = <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>��cmpg����cmpʱ,B &gt; CʱA = 1,��֮-1;��cmplʱ,B &gt; CʱA = -1��֮1;</strong></p>
+<p><strong>当cmpg或者cmp时,B &gt; C时A = 1,反之-1;当cmpl时,B &gt; C时A = -1反之1;</strong></p>
 <ul>
-<li>“cmpg-double” �Ƚ�����double��ֵ</li>
-<li>“cmpl-double” �Ƚ�����double��ֵ</li>
-<li>“cmp-long” �Ƚ�����long��ֵ</li>
+<li>“cmpg-double” 比较两个double的值</li>
+<li>“cmpl-double” 比较两个double的值</li>
+<li>“cmp-long” 比较两个long的值</li>
 </ul>
-<p><strong>�ֶβ���ָ��</strong></p>
-<p>�ֶβ���ָ�������Զ���ʵ�����ֶν��ж�д����.<br>�ֶε����Ϳ�����Java����Ч����������,����ͨ�ֶ��뾲̬�ֶβ���������ָ�,�ֱ���”iinstanceop vA,vB,field@CCCC”��”sstaticop vAA,field@BBBB”.<br>��Android 4.0ϵͳ��,��”iinstanceop /jumbovAAAA,vBBBB,field@CCCCCCCC”��”sstaticop/jumbo vAAAA,field@BBBBBBBB”.������������������ͬ,ֻ�Ǽ���jmpbo��׺,�Ĵ�����ָ������ȡֵ��Χ����(������ֻ��˵��/jumboָ����׺��ָ�,���þͲ�ָ����)<br>��ͨ�ֶ�ָ����ָ��ǰ׺Ϊi,��.����ͨ�ֶζ�����ʹ��igetָ��,д����ʹ��iputָ��;��̬�ֶε�ָ��ǰ׺Ϊs,��.�Ծ�̬�ֶεĶ�����Ϊsget,д����Ϊsput;<br>���ݷ��ʵ��ֶ����Ͳ�ͬ,�ֶβ���ָ�������������ֶ����͵ĺ�׺,��iget-byteָ����ʾ��ȡʵ���ֶε�ֵ����Ϊbyte;</p>
-<p><strong>��������ָ��</strong><br>��������ָ���������ʵ���ķ���,���Ļ���ָ��Ϊinvoke,��������ָ����”invoke-kind{vC,vD,vE,vF,vG},meth@BBBB”��”invoke-kind/range{vCCCC…VNNNN},meth@BBBB”����,������ָ������ûɶ��ͬ,���������ò����Ĵ���ʱʹ����range��ָ���Ĵ����ķ�Χ,���ݷ������͵Ĳ�ͬ,��������5����������ָ��:</p>
+<p><strong>字段操作指令</strong></p>
+<p>字段操作指令用来对对象实例的字段进行读写操作.<br>字段的类型可以是Java中有效的数据类型,对普通字段与静态字段操作有两种指令集,分别是”iinstanceop vA,vB,field@CCCC”与”sstaticop vAA,field@BBBB”.<br>在Android 4.0系统中,有”iinstanceop /jumbovAAAA,vBBBB,field@CCCCCCCC”与”sstaticop/jumbo vAAAA,field@BBBBBBBB”.和上面的两种作用相同,只是加了jmpbo后缀,寄存器与指令索引取值范围更大(后面的只会说有/jumbo指令后缀的指令集,作用就不指明了)<br>普通字段指令的指令前缀为i,如.对普通字段读操作使用iget指令,写操作使用iput指令;静态字段的指令前缀为s,如.对静态字段的读操作为sget,写操作为sput;<br>根据访问的字段类型不同,字段操作指令后面会紧跟字段类型的后缀,如iget-byte指令表示读取实例字段的值类型为byte;</p>
+<p><strong>方法调用指令</strong><br>方法调用指令负责调用类实例的方法,它的基础指令为invoke,方法调用指令有”invoke-kind{vC,vD,vE,vF,vG},meth@BBBB”与”invoke-kind/range{vCCCC…VNNNN},meth@BBBB”两类,这两类指令作用没啥不同,后者在设置参数寄存器时使用了range来指定寄存器的范围,根据方法类型的不同,共有如下5条方法调用指令:</p>
 <ol>
-<li>“invoke-virtual” ����ʵ�����鷽��</li>
-<li>“invoke-super” ����ʵ���ĸ��෽��</li>
-<li>“invoke-direct” ����ʵ����ֱ�ӷ���</li>
-<li>“invoke-static” ����ʵ���ľ�̬����</li>
-<li>“invoke-interface” ����ʵ���Ľӿڷ���<br>Android 4.0��jumbo��ָ�;</li>
+<li>“invoke-virtual” 调用实例的虚方法</li>
+<li>“invoke-super” 调用实例的父类方法</li>
+<li>“invoke-direct” 调用实例的直接方法</li>
+<li>“invoke-static” 调用实例的静态方法</li>
+<li>“invoke-interface” 调用实例的接口方法<br>Android 4.0有jumbo的指令集;</li>
 </ol>
-<p>��������ָ���ķ���ֵ����ʹ��move-result*ָ������ȡ:<br>invoke-static{},Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;<br>move-result-object v0;</p>
-<p><strong>����ת��ָ��</strong><br>����ת��ָ�����ڽ�һ�����͵���ֵת��Ϊ��һ������,���ĸ�ʽΪ”unop vA,vB” ��vB�е�������һ������(ת��)����vA��:(�Ƚϼ���,ֱ����ͼ)</p>
+<p>方法调用指令的返回值必须使用move-result*指令来获取:<br>invoke-static{},Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;<br>move-result-object v0;</p>
+<p><strong>数据转换指令</strong><br>数据转换指令用于将一种类型的数值转换为另一种类型,他的格式为”unop vA,vB” 把vB中的数据做一定运算(转换)放在vA中:(比较简单,直接上图)</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413185529172?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170413185529172?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>��������ָ��</strong></p>
-<p>��������ָ��������������ָ�����߼�����ָ��:</p>
+<p><strong>数据运算指令</strong></p>
+<p>数据运算指令包括算数运算指令与逻辑运算指令:</p>
 <ul>
-<li>��������ָ��:��,��,��,��,ģ,��λ��</li>
-<li>�߼�����ָ��:����,��,��,�ֻ���;<br>�ϸ�ͼ��<figure class="image-bubble">
+<li>算数运算指令:加,减,乘,除,模,移位等</li>
+<li>逻辑运算指令:间与,或,非,抑或等;<br>上个图吧<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170413185946687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170413185946687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-���л����ֽ���������-type������-int,-long,-float,-double,����3��ָ��Ҳ���,�Ͳ�����,������ͨ;</li>
+其中基础字节码后面的-type可以是-int,-long,-float,-double,后面3类指令也差不多,就不列了,触类旁通;</li>
 </ul>
 <p><strong>=<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= =<em>= =</em>= </strong></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;���Ҷ�֪��Java������������Java��������,Android������?&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;��ȻAndroidƽ̨ʹ��Java����������Ӧ�ó���,����Android����ȴ�����
+      &lt;p&gt;&lt;strong&gt;大家都知道Java程序是运行在Java虚拟机上,Android程序呢?&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;虽然Android平台使用Java语言来开发应用程序,但是Android程序却不是运行在标准的Java虚拟机上的. Google为Android平
     
     </summary>
     
     
-      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="Android逆向" scheme="http://joryhe.coding.me/tags/Android%E9%80%86%E5%90%91/"/>
     
   </entry>
   
   <entry>
-    <title>��׿�ƶ�����(��)</title>
+    <title>安卓移动逆向(二)</title>
     <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E4%BA%8C).html"/>
     <id>http://joryhe.coding.me/post/安卓移动逆向(二).html</id>
     <published>2017-05-02T04:12:12.000Z</published>
-    <updated>2017-05-10T09:26:03.446Z</updated>
+    <updated>2017-05-10T09:36:57.451Z</updated>
     
-    <content type="html"><![CDATA[<p>###Сʵ��–�ƽ�һ��С����###</p>
-<p><strong>�����ƽ�</strong></p>
-<p>�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ���Ķ�Smali�ļ��Ĵ������������������л���,�ҵ�������ͻ�ƿڽ����޸�,����ʹ��ApkTool���±�������Apk�ļ���ǩ��,�������в���,����ѭ��,ֱ�����򱻳ɹ��ƽ�.</p>
-<p><strong>��Ҫ����</strong></p>
-<p> <a href="http://download.csdn.net/detail/redwolfchao/9807486" target="_blank" rel="external">���빤�� : ApkTool</a></p>
-<p>ǩ������: SignApk : ���ӣ�<a href="http://pan.baidu.com/s/1miwl6lU" target="_blank" rel="external">http://pan.baidu.com/s/1miwl6lU</a> ���룺ze44</p>
-<p>������֮�� ��ѹĿ¼��path�������� �㶮��</p>
+    <content type="html"><![CDATA[<p>###小实践–破解一个小程序###</p>
+<p><strong>如何破解</strong></p>
+<p>破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突破口进行修改,最后使用ApkTool重新编译生成Apk文件并签名,最后运行测试,如此循环,直到程序被成功破解.</p>
+<p><strong>需要工具</strong></p>
+<p> <a href="http://download.csdn.net/detail/redwolfchao/9807486" target="_blank" rel="external">编译工具 : ApkTool</a></p>
+<p>签名工具: SignApk : 链接：<a href="http://pan.baidu.com/s/1miwl6lU" target="_blank" rel="external">http://pan.baidu.com/s/1miwl6lU</a> 密码：ze44</p>
+<p>下载完之后 解压目录到path环境变量 你懂得</p>
 <hr>
-<p><strong>׼��</strong></p>
-<p>�����Ƚ���һ���Լ���App,����������(PS:��Ը���Լ�����Դ������)</p>
-<p><a href="http://download.csdn.net/detail/redwolfchao/9807302" target="_blank" rel="external">���ƽ�����</a></p>
-<p>���ܾ��Ǹ����������û�������ע����,�ж�������ע������ϵͳ�㷨���ɵ�ע�����Ƿ�һ��,һ����ע���ɹ�,��������,�����򲻿���;</p>
+<p><strong>准备</strong></p>
+<p>我们先建立一个自己的App,长得像这样(PS:不愿意自己建有源码下载)</p>
+<p><a href="http://download.csdn.net/detail/redwolfchao/9807302" target="_blank" rel="external">待破解代码</a></p>
+<p>功能就是根据输入的用户名生成注册码,判断输入的注册码和系统算法生成的注册码是否一致,一致则注册成功,软件可用,否则则不可用;</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����" title="">
+                    <img src="http://img.blog.csdn.net/20170407190037293?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="软件" title="">
                 </div>
-                <div class="image-caption">����</div>
+                <div class="image-caption">软件</div>
             </figure>
-<p><strong>�������Ĵ���</strong></p>
+<p><strong>软件核心代码</strong></p>
 <figure class="highlight pony"><table><tr><td class="code"><pre><div class="line">findViewById(<span class="type">R</span>.id.act_main_btn).setOnClickListener(<span class="function"><span class="keyword">new</span> <span class="title">View</span>.<span class="title">OnClickListener</span>() &#123;</span></div><div class="line">    @<span class="title">Override</span></div><div class="line">    <span class="title">public</span> <span class="title">void</span> <span class="title">onClick</span>(<span class="type">View</span> v) &#123;</div><div class="line">        <span class="title">String</span> <span class="title">userName</span> = <span class="title">etUser</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">String</span> <span class="title">sn</span> = <span class="title">etSN</span>.<span class="title">getText</span>().<span class="title">toString</span>().<span class="title">trim</span>();</div><div class="line">        <span class="title">if</span> (checkSN(userName, sn)) &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_register, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">            <span class="title">tvTitle</span>.<span class="title">setText</span>(<span class="type">R</span>.string.string_success_register);</div><div class="line">        &#125; <span class="title">else</span> &#123;</div><div class="line">            <span class="title">Toast</span>.<span class="title">makeText</span>(<span class="type">MainActivity</span>.this, <span class="type">R</span>.string.string_unregister, <span class="type">Toast</span>.<span class="type">LENGTH_SHORT</span>).<span class="title">show</span>();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <hr>
-<p><strong>��ʼ�ƽ�</strong></p>
-<p>����������Ҫ��apktool d appname.apk  ���з�����  ��ͼ</p>
+<p><strong>开始破解</strong></p>
+<p>首先我们需要用apktool d appname.apk  进行反编译  如图</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="������" title="">
+                    <img src="http://img.blog.csdn.net/20170407190405811?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="反编译" title="">
                 </div>
-                <div class="image-caption">������</div>
+                <div class="image-caption">反编译</div>
             </figure>
-<p>Ȼ��������һ��appName���ļ��� �������� ��Щsmali���ļ���</p>
-<p>֮�����ǵ�Ŀ�� ���ҵ�ͻ�ƿ�,ʲô��ͻ�ƿ�? </p>
-<p><strong><em>����Button֮������ʾ���־���ͻ�ƿ�</em></strong></p>
-<p>���ǽ���values�е�string.xml���ҿ�</p>
+<p>然后生成了一个appName的文件夹 里面就是 那些smali等文件了</p>
+<p>之后我们的目的 是找到突破口,什么是突破口? </p>
+<p><strong><em>点击Button之后的提示文字就是突破口</em></strong></p>
+<p>我们进入values中的string.xml找找看</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -398,130 +398,130 @@
                 </div>
                 <div class="image-caption">..</div>
             </figure>
-<p><strong>����Android����ʱ,String.xml�ļ��е������ַ�����Դ����”gen/<packagename>/R.java”�ļ���String���б���ʶ,ÿ���ַ�������Ψһ��int��������ֵ,ʹ��ApkTool������Apk�ļ���,���е�����ֵ������string.xml�ļ�ͬĿ¼�µ�public.xml��</packagename></strong></p>
-<p>����string_unregister��public.xml��</p>
+<p><strong>开发Android程序时,String.xml文件中的所有字符串资源都在”gen/<packagename>/R.java”文件的String类中被标识,每个字符串都有唯一的int类型索引值,使用ApkTool反编译Apk文件后,所有的索引值保存在string.xml文件同目录下的public.xml中</packagename></strong></p>
+<p>搜索string_unregister在public.xml中</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091202516?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091202516?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>���Ƿ���string_unregister����Ӧ��idΪ 0x7f060027 </p>
-<p><strong>����˵��Ҫȫ������smali�ļ����а���0x7f060027�ļ���λ��,����֪������MainActivity��������,ֱ�ӽ��뼴��(PS:����,�Ҳ�֪������ȫ�������ļ��ڵ�����)</strong></p>
-<p>���ǽ���MainActivity$1.smali����0x7f060027   ��ͼ</p>
+<p>我们发现string_unregister所对应的id为 0x7f060027 </p>
+<p><strong>书上说需要全局搜索smali文件夹中包含0x7f060027文件的位置,我们知道是在MainActivity中声明的,直接进入即可(PS:惭愧,我不知道如何全局搜索文件内的内容)</strong></p>
+<p>我们进入MainActivity$1.smali搜索0x7f060027   如图</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091511625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091511625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>��������</p>
+<p>解析如下</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091635813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091635813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>��ͼ�޸�֮��,���ǽ���app�ļ���,�ٴα�����������dist������һ��app,��������ǩ��(��ǩ�����޷����в��Ե�) ��ͼ</strong></p>
+<p><strong>按图修改之后,我们进入app文件夹,再次编译打包会在dist中生成一个app,我们现在签名(不签名是无法运行测试的) 如图</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091706813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091706813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>Ȼ�����ǽ���ǩ��,���������ص�signapk����,����-&gt;��ǩ����App  ��ͼ</strong><br><figure class="image-bubble">
+<p><strong>然后我们进行签名,用我们下载的signapk工具,生成-&gt;已签名的App  如图</strong><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408091805963?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure></p>
-<p><strong>����֮�� ���ǿ���ͨ��adb install signed.apk ��װ���ֻ����� Ҳ���Ը��Ƶ��ֻ���ֱ�Ӱ�װ,Ŷ,���ܻᱨ��</strong></p>
+<p><strong>生成之后 我们可以通过adb install signed.apk 安装到手机测试 也可以复制到手机上直接安装,哦,可能会报错</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408092231782?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p><strong>���ֻ��ϵ���ͬAppж���˼���</strong></p>
-<p><strong>��װ֮��,��������</strong></p>
+<p><strong>把手机上的相同App卸载了即可</strong></p>
+<p><strong>安装之后,就这样了</strong></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="����дͼƬ����" title="">
+                    <img src="http://img.blog.csdn.net/20170408092410582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUmVkV29sZkNoYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述" title="">
                 </div>
-                <div class="image-caption">����дͼƬ����</div>
+                <div class="image-caption">这里写图片描述</div>
             </figure>
-<p>�ο��鼮: <a href="http://download.csdn.net/detail/redwolfchao/9807301" target="_blank" rel="external">Android������ȫ����������</a> </p>
+<p>参考书籍: <a href="http://download.csdn.net/detail/redwolfchao/9807301" target="_blank" rel="external">Android软件安全与逆向分析</a> </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###Сʵ��–�ƽ�һ��С����###&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;�����ƽ�&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;�ƽ�Android����ͨ���ķ����ǽ�apk�ļ�����ApkTool������,����Smali��ʽ�ķ���������.Ȼ�
+      &lt;p&gt;###小实践–破解一个小程序###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何破解&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;破解Android程序通常的方法是将apk文件利用ApkTool反编译,生成Smali格式的反汇编代码.然后阅读Smali文件的代码来理解程序的运行机制,找到程序的突
     
     </summary>
     
     
-      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="Android逆向" scheme="http://joryhe.coding.me/tags/Android%E9%80%86%E5%90%91/"/>
     
   </entry>
   
   <entry>
-    <title>��׿�ƶ�����(ɨä)</title>
+    <title>安卓移动逆向(扫盲)</title>
     <link href="http://joryhe.coding.me/post/%E5%AE%89%E5%8D%93%E7%A7%BB%E5%8A%A8%E9%80%86%E5%90%91(%E6%89%AB%E7%9B%B2).html"/>
     <id>http://joryhe.coding.me/post/安卓移动逆向(扫盲).html</id>
     <published>2017-05-01T03:11:11.000Z</published>
-    <updated>2017-05-10T09:26:34.367Z</updated>
+    <updated>2017-05-10T09:37:22.612Z</updated>
     
-    <content type="html"><![CDATA[<p>###Android ���� ###</p>
-<p><strong>ûɶ��˵��,��ɨһ��ä</strong></p>
+    <content type="html"><![CDATA[<p>###Android 逆向 ###</p>
+<p><strong>没啥好说的,先扫一下盲</strong></p>
 <hr>
-<p>###APK ���� ###</p>
-<p><strong>asset�ļ��У�</strong><br><strong>��ԴĿ¼1��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>lib�ļ��У�  so������λ�ã�һ����NDK�����õ���������ʹ����Ϸ������JNI native���õĹ�����</strong><br><strong>res�ļ��� ����ԴĿ¼2��asset��res������ԴĿ¼���������𣬼�����˵��</strong><br><strong>classes.dex  ��Java���������õ���Dalvik VM��ֱ��ִ�е��ļ��������н���</strong></p>
-<p><strong>resĿ¼�µ���Դ�ļ��ڱ���ʱ���Զ����������ļ���R.java������Java��������R.xxx.yyy�����ã�</strong><br><strong>��assetĿ¼�µ���Դ�ļ�����Ҫ������������Java��������Ҫ��AssetManager�����ʣ�</strong></p>
-<p><strong>һ����˵��������Ƶ����Ƶ��Դ����Ҫ����raw��asset�£���ʹ��Java������Android����ʹ�õ�����Դ�ļ���������res�£�ʹ��C++��Ϸ���棨��ʹ��Lua Unity3D�ȣ�����Դ�ļ�����Ҫ����asset�¡�</strong></p>
+<p>###APK 组成 ###</p>
+<p><strong>asset文件夹：</strong><br><strong>资源目录1：asset和res都是资源目录但有所区别，见下面说明</strong><br><strong>lib文件夹：  so库存放位置，一般由NDK编译得到，常见于使用游戏引擎或JNI native调用的工程中</strong><br><strong>res文件夹 ：资源目录2：asset和res都是资源目录但有所区别，见下面说明</strong><br><strong>classes.dex  ：Java代码编译得到的Dalvik VM能直接执行的文件，下面有介绍</strong></p>
+<p><strong>res目录下的资源文件在编译时会自动生成索引文件（R.java），在Java代码中用R.xxx.yyy来引用；</strong><br><strong>而asset目录下的资源文件不需要生成索引，在Java代码中需要用AssetManager来访问；</strong></p>
+<p><strong>一般来说，除了音频和视频资源（需要放在raw或asset下），使用Java开发的Android工程使用到的资源文件都会放在res下；使用C++游戏引擎（或使用Lua Unity3D等）的资源文件均需要放在asset下。</strong></p>
 <hr>
-<p>###Dalvik �ֽ��� ###</p>
-<p><strong>Dalvik�ֽ�����ʲô��</strong></p>
-<p>Dalvik�ֽ�����ѧϰ�ƽ��Ļ���������������Ҫ�˽�һ��</p>
-<p>Dalvik��googleר��ΪAndroid����ϵͳ���Ƶ�һ�����������������ȵ��Ż�����ȻAndroid�ϵĳ�����ʹ��java�������ģ�����Dalvik�ͱ�׼��java������JVM���������¡�Dalvik VM�ǻ��ڼĴ����ģ���JVM�ǻ���ջ�ģ�Dalvik��ר�����ļ�ִ�и�ʽdex��dalvik executable������JVM��ִ�е���java�ֽ��롣Dalvik VM��JVM�ٶȸ��죬ռ�ÿռ����١�</p>
-<p>ͨ��Dalvik���ֽ������ǲ���ֱ�ӿ���ԭ�����߼����룬��ʱ��Ҫ������Apktool��dex2jar+jd-gui�����������鿴�����ǣ�ע���������������޸�APK��Ҫ�������ļ���.smali�ļ��������ǵ�������Java�ļ����±��롣</p>
+<p>###Dalvik 字节码 ###</p>
+<p><strong>Dalvik字节码是什么？</strong></p>
+<p>Dalvik字节码是学习破解的基础，对它我们需要了解一下</p>
+<p>Dalvik是google专门为Android操作系统设计的一个虚拟机，经过深度的优化。虽然Android上的程序是使用java来开发的，但是Dalvik和标准的java虚拟机JVM还是两回事。Dalvik VM是基于寄存器的，而JVM是基于栈的；Dalvik有专属的文件执行格式dex（dalvik executable），而JVM则执行的是java字节码。Dalvik VM比JVM速度更快，占用空间更少。</p>
+<p>通过Dalvik的字节码我们不能直接看到原来的逻辑代码，这时需要借助如Apktool或dex2jar+jd-gui工具来帮助查看。但是，注意的是最终我们修改APK需要操作的文件是.smali文件，而不是导出来的Java文件重新编译。</p>
 <hr>
-<p>###Smali–�ƽ�������֮��###</p>
-<p><strong>ʲô��Smali��</strong></p>
-<p><strong>Smali��Baksmali�ֱ���ָ��׿ϵͳ����Java��������Dalvik����ʹ�õ�һ�֡�dex��ʽ�ļ��Ļ��������������������﷨��һ�ֿ���ʽ��Jasmin/dedexer�﷨��������ʵ����.dex��ʽ���й��ܣ�ע�⣬������Ϣ����·��Ϣ�ȣ�</strong></p>
-<p><strong>�����Ƕ�APK�ļ����з������󣬱������ɴ������ļ���С���ڴ˶�smali�ļ����м�Ҫ�Ľ��ܡ�������Davlik�ֽ����У��Ĵ�������32λ�ģ��ܹ�֧���κ����ͣ�64λ���ͣ�Long/Double����2���Ĵ�����ʾ��Dalvik�ֽ������������ͣ�ԭʼ���ͣ��������ͣ��������������飩</strong></p>
-<p><strong><em>ԭʼ����</em></strong></p>
+<p>###Smali–破解的重中之重###</p>
+<p><strong>什么是Smali？</strong></p>
+<p><strong>Smali，Baksmali分别是指安卓系统里的Java虚拟机（Dalvik）所使用的一种。dex格式文件的汇编器，反汇编器。其语法是一种宽松式的Jasmin/dedexer语法，而且它实现了.dex格式所有功能（注解，调试信息，线路信息等）</strong></p>
+<p><strong>当我们对APK文件进行反编译后，便会生成此类的文件，小编在此对smali文件进行简要的介绍。其中在Davlik字节码中，寄存器都是32位的，能够支持任何类型，64位类型（Long/Double）用2个寄存器表示；Dalvik字节码有两种类型：原始类型；引用类型（包括对象和数组）</strong></p>
+<p><strong><em>原始类型</em></strong></p>
 <p>B—byte<br>C—char<br>D—double<br>F—float<br>I—int<br>J—long<br>S—short<br>V—void<br>Z—boolean<br>[XXX—array<br>Lxxx/yyy—object</p>
-<p><strong>����������������������ı�ʾ��ʽ�ǣ��ڻ�������ǰ����ǰ�����š�[��������int������float�����ֱ���ʾΪ��[I��[F�������ı�ʾ����L��Ϊ��ͷ����ʽ��LpackageName/objectName;��ע�������и��ֺŸ������󣩣�����String������smali��Ϊ��Ljava/lang/String;������java/lang��Ӧjava.lang����String���Ƕ����ڸð��е�һ��������</strong></p>
-<p><strong>���������ʣ���Ȼ������LpackageName/objectName;����ʾ�������������ڲ�����������smali��������?�����ǣ�LpackageName/objectName$$subObjectName;��Ҳ�������ڲ���ǰ�ӡ�$�����ţ����ڡ�$�����Ÿ����Ĺ������ں���̸����</strong></p>
-<p><strong>�����Ķ���һ��Ϊ��     Func-Name (Para-Type1Para-Type2Para-Type3…)Return-Type     ע������������֮��û���κηָ�����ͬ���ټ������Ӿ����������ˣ�     1. hello ()V         û����������void hello()��     2. hello (III)Z         ��������boolean hello(int, int, int)��     3. hello (Z[I[ILjava/lang/String;J)Ljava/lang/String;         ����������String hello (boolean, int[], int[], String, long) ������</strong></p>
+<p><strong>这里解析下最后两项，数组的表示方式是：在基本类型前加上前中括号“[”，例如int数组和float数组分别表示为：[I、[F；对象的表示则以L作为开头，格式是LpackageName/objectName;（注意必须有个分号跟在最后），例如String对象在smali中为：Ljava/lang/String;，其中java/lang对应java.lang包，String就是定义在该包中的一个对象。</strong></p>
+<p><strong>或许有人问，既然类是用LpackageName/objectName;来表示，那类里面的内部类又如何在smali中引用呢?答案是：LpackageName/objectName$$subObjectName;。也就是在内部类前加“$”符号，关于“$”符号更多的规则将在后面谈到。</strong></p>
+<p><strong>方法的定义一般为：     Func-Name (Para-Type1Para-Type2Para-Type3…)Return-Type     注意参数与参数之间没有任何分隔符，同样举几个例子就容易明白了：     1. hello ()V         没错，这就是void hello()。     2. hello (III)Z         这个则是boolean hello(int, int, int)。     3. hello (Z[I[ILjava/lang/String;J)Ljava/lang/String;         看出来这是String hello (boolean, int[], int[], String, long) 了吗？</strong></p>
 <hr>
-<p><strong><em>Smali�����﷨</em></strong></p>
-<p>.field private isFlag:z������������<br>.method��������<br>.parameter������������<br>.prologue����������ʼ<br>.line 123�����˷���λ�ڵ�123��<br>invoke-super�������ø�����<br>const/high16  v0, 0x7fo3������0x7fo3��ֵ��v0<br>invoke-direct�������ú���<br>return-void������������void<br>.end method������������<br>new-instance��������ʵ��<br>iput-object����������ֵ<br>iget-object�������ö���<br>invoke-static�������þ�̬����</p>
-<p>������ת��֧��</p>
-<p>“if-eq vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-ne vA, vB, :cond_xx”   ����vA������vB����ת��:cond_xx<br>“if-lt vA, vB, :cond_xx”    ����vAС��vB����ת��:cond_xx<br>“if-ge vA, vB, :cond_xx”   ����vA���ڵ���vB����ת��:cond_xx<br>“if-gt vA, vB, :cond_xx”   ����vA����vB����ת��:cond_xx<br>“if-le vA, vB, :cond_xx”    ����vAС�ڵ���vB����ת��:cond_xx<br>“if-eqz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-nez vA, :cond_xx”   ����vA������0����ת��:cond_xx<br>“if-ltz vA, :cond_xx”    ����vAС��0����ת��:cond_xx<br>“if-gez vA, :cond_xx”   ����vA���ڵ���0����ת��:cond_xx<br>“if-gtz vA, :cond_xx”   ����vA����0����ת��:cond_xx<br>“if-lez vA, :cond_xx”    ����vAС�ڵ���0����ת��:cond_xx</p>
+<p><strong><em>Smali基本语法</em></strong></p>
+<p>.field private isFlag:z　　定义变量<br>.method　　方法<br>.parameter　　方法参数<br>.prologue　　方法开始<br>.line 123　　此方法位于第123行<br>invoke-super　　调用父函数<br>const/high16  v0, 0x7fo3　　把0x7fo3赋值给v0<br>invoke-direct　　调用函数<br>return-void　　函数返回void<br>.end method　　函数结束<br>new-instance　　创建实例<br>iput-object　　对象赋值<br>iget-object　　调用对象<br>invoke-static　　调用静态函数</p>
+<p>条件跳转分支：</p>
+<p>“if-eq vA, vB, :cond_xx”   如果vA等于vB则跳转到:cond_xx<br>“if-ne vA, vB, :cond_xx”   如果vA不等于vB则跳转到:cond_xx<br>“if-lt vA, vB, :cond_xx”    如果vA小于vB则跳转到:cond_xx<br>“if-ge vA, vB, :cond_xx”   如果vA大于等于vB则跳转到:cond_xx<br>“if-gt vA, vB, :cond_xx”   如果vA大于vB则跳转到:cond_xx<br>“if-le vA, vB, :cond_xx”    如果vA小于等于vB则跳转到:cond_xx<br>“if-eqz vA, :cond_xx”   如果vA等于0则跳转到:cond_xx<br>“if-nez vA, :cond_xx”   如果vA不等于0则跳转到:cond_xx<br>“if-ltz vA, :cond_xx”    如果vA小于0则跳转到:cond_xx<br>“if-gez vA, :cond_xx”   如果vA大于等于0则跳转到:cond_xx<br>“if-gtz vA, :cond_xx”   如果vA大于0则跳转到:cond_xx<br>“if-lez vA, :cond_xx”    如果vA小于等于0则跳转到:cond_xx</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###Android ���� ###&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ûɶ��˵��,��ɨһ��ä&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;###Android 逆向 ###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;没啥好说的,先扫一下盲&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;###APK ���� ###&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;asset�ļ��У�&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;�
+&lt;p&gt;###APK 组成 ###&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;asset文件夹：&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;资源目录1：asset
     
     </summary>
     
     
-      <category term="Android����" scheme="http://joryhe.coding.me/tags/Android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="Android逆向" scheme="http://joryhe.coding.me/tags/Android%E9%80%86%E5%90%91/"/>
     
   </entry>
   
